@@ -1,4 +1,4 @@
-package data.reader.mp;
+package reader.mp;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

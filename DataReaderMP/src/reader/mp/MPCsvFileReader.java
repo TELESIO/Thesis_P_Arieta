@@ -1,4 +1,4 @@
-package data.reader.mp;
+package reader.mp;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -12,7 +12,7 @@ import com.opencsv.CSVReader;
 
 import data.model.RawData;
 import data.model.structure.DataContainer;
-import data.reader.Reader;
+import reader.Reader;
 
 public class MPCsvFileReader extends Reader {
 

@@ -1,33 +1,45 @@
 package data.manipulation.mp.worker;
 
-import java.util.HashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import data.manipulation.FilteringDataOperations;
 import data.manipulation.mp.OperatorBarrier;
 import data.model.RawData;
+import data.model.structure.DataContainer;
 
-public class FilterWorker extends Thread {
+public class FilterWorker extends Worker {
 
-	private HashMap<Integer, RawData> dataToHandle;
-	private OperatorBarrier barrier;
-	private FilteringDataOperations dataFiltered;
+    private DataContainer data;
+    private OperatorBarrier barrier;
+    private FilteringDataOperations dataFiltered;
 
-	public FilterWorker(HashMap<Integer, RawData> data, OperatorBarrier barrier) {
-		this.dataToHandle = data;
-		this.barrier = barrier;
-		dataFiltered = new FilteringDataOperations();
+    public FilterWorker(DataContainer data, OperatorBarrier barrier) {
+	this.data = data;
+	this.barrier = barrier;
+	this.dataFiltered = new FilteringDataOperations();
+    }
 
-	}
+    public FilterWorker() {
+	this.dataFiltered = new FilteringDataOperations();
+    }
 
-	@Override
-	public void run() {
-		dataFiltered.reduceLowVelocity(dataToHandle);
-		dataFiltered.reduceHighVelocity(dataToHandle);
-		barrier.done();
-	}
+    @Override
+    public void run() {
 
-	public HashMap<Integer, RawData> getResult() {
-		return dataToHandle;
-	}
+	// dataFiltered.reduceLowVelocity(data);
+	// dataFiltered.reduceHighVelocity(data);
+	dataFiltered.simpleMovingAverageFilter(data);
+	barrier.done();
+    }
 
+    @Override
+    public CopyOnWriteArrayList<RawData> getResult() {
+	return data.getData();
+    }
+
+    @Override
+    public void set(DataContainer data, OperatorBarrier barrier) {
+	this.data = data;
+	this.barrier = barrier;
+    }
 }

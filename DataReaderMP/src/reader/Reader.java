@@ -1,4 +1,4 @@
-package data.reader;
+package reader;
 
 import data.model.structure.DataContainer;
 

@@ -1,4 +1,4 @@
-package data.reader.mp;
+package reader.mp;
 
 import java.util.ArrayList;
 import java.util.List;

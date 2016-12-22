@@ -1,16 +1,16 @@
+package main_test;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import data.manipulation.ColorGenerator;
 import data.model.ResultData;
 
 public class FileCreator {
 
-    private HashMap<Integer, ResultData> result;
+    private CopyOnWriteArrayList<ResultData> result;
 
-    public FileCreator(HashMap<Integer, ResultData> result) {
+    public FileCreator(CopyOnWriteArrayList<ResultData> result) {
 	this.result = result;
     }
 
@@ -36,11 +36,11 @@ public class FileCreator {
 	    writer.println(" };");
 	    writer.println("var map = new google.maps.Map(mapDiv, mapOptions);");
 
-	    for (Map.Entry<Integer, ResultData> resaa : result.entrySet()) {
-		double lat = resaa.getValue().getGeolocalization().getLatitude();
-		double lon = resaa.getValue().getGeolocalization().getLongitude();
+	    for (ResultData resaa : result) {
+		double lat = resaa.getGeolocalization().getLatitude();
+		double lon = resaa.getGeolocalization().getLongitude();
 		ColorGenerator g = new ColorGenerator();
-		double value = resaa.getValue().getResultant_value();
+		double value = resaa.getResultant_value();
 		String color = g.getColor(value);
 		// System.out.println(value);
 		writer.println("var circle = new google.maps.Circle ({");

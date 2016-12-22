@@ -30,10 +30,9 @@ public class Accelerometer {
 	return acceleration_x;
     }
 
-    public boolean setAcceleration_x(double acceleration_x) {
-
+    public void setAcceleration_x(double acceleration_x) {
 	this.acceleration_x = acceleration_x;
-	return true;
+	this.setResultant_acceleration();
     }
 
     public double getAcceleration_y() {
@@ -42,6 +41,7 @@ public class Accelerometer {
 
     public void setAcceleration_y(double acceleration_y) {
 	this.acceleration_y = acceleration_y;
+	this.setResultant_acceleration();
     }
 
     public double getAcceleration_z() {
@@ -50,6 +50,7 @@ public class Accelerometer {
 
     public void setAcceleration_z(double acceleration_z) {
 	this.acceleration_z = acceleration_z;
+	this.setResultant_acceleration();
     }
 
     public double getResultant_acceleration() {
