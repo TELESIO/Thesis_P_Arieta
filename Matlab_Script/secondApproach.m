@@ -33,6 +33,13 @@ v_refit = Cheby2Order(100,minpfre,maxpfre,minstfre,maxstpfre,v,Tempo_ms);
 d = cumtrapz(v_refit);
 
 t = Tempo_ms;
+d1 = tsmovavg(d,'s',5,1);
+
+d_max = max(d1);
+d_res = d1 / d_max;
+M = [d_res, Latitudine, Longitudine];
+dlmwrite('DisplacementHTMLRepresentation/TestingDisplacement/file/sample.csv',M,'delimiter',',','precision','%.30f');
+
 
 figure(1)
 plot(t,d_res);
