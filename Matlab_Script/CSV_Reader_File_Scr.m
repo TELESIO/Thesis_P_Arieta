@@ -2,7 +2,7 @@
 %file .csv. Bisogna specificare all'interno dello script stesso, il nome
 %del file da leggere presente nella Working Directory.
 
-file_Name = 'VeryFast.csv';
+file_Name = 'DatiRegistrati/Utlitmo.csv';
  
 type_Of_Delimiter = [',' , ';'];
 
@@ -15,7 +15,7 @@ fileID = fopen(file_Name);
 start_Row = 2;
 %Viene definito il formato specifico dei tipi di valori presenti nelle
 %colonne del file
-data_File_Format='%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%s%s%f%s';
+data_File_Format='%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%s%f%f%s%s%f%s';
 
 %Salvo i dati del file specificandone le varie impostazioni di lettura.
 data_File = textscan(fileID,data_File_Format,'Delimiter',delimiter,'HeaderLines',start_Row-1,'EmptyValue', NaN,'ReturnOnError',false);
