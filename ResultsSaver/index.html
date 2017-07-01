@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.css' rel='stylesheet' />
+<link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
+<style>
+#map {
+position: absolute;
+ top: 0;
+bottom: 0;
+left: 0;
+ right: 0;
+}
+ #locations {
+position: absolute;
+}
+</style>
+</head>
+<body>
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoicGFzcXVhbGVhcmlldGEiLCJhIjoiY2oyazZ3bDl0MDAwYzJ3cnkxNjg5Z3h0MyJ9.ojRjeCplUQ2fjfhmY5FIDQ'; 
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v9',
+center: [16.22789958762887,39.362053092783505],
+ maxZoom: 16,minZoom: 5
+});
+map.addControl(new mapboxgl.FullscreenControl());
+map.dragRotate.disable();
+map.touchZoomRotate.disableRotation();
+map.on('load', function () {
+ map.addLayer({
+'id': 'test',
+'type': 'circle',
+'source': {
+type: 'geojson',
+data:{
+'type' : 'FeatureCollection',
+'features': [
+{'type':'Feature',
+'geometry': {
+'type': 'Point',
+ 'coordinates': [16.22677,39.3614398888897]
+ },
+'properties':{
+'color':'#11ee00'
+}
+},
+{'type':'Feature',
+'geometry': {
+'type': 'Point',
+ 'coordinates': [16.22677,39.3614399166675]
+ },
+'properties':{
+'color':'#11ee00'
+}
+},
+{'type':'Feature',
+'geometry': {
+'type': 'Point',
+ 'coordinates': [16.22677,39.3614399444453]
+ },
+'properties':{
+'color':'#11ee00'
+}
+},
+{'type':'Feature',
+'geometry': {
+'type': 'Point',
+ 'coordinates': [16.22677,39.361439972223]
+ },
+'properties':{
+'color':'#11ee00'
+}
+},
+{'type':'Feature',
+'geometry': {
+'type': 'Point',
+ 'coordinates': [16.22677,39.36144]
+ },
+'properties':{
+'color':'#11ee00'
+}
+},
+]
+}
+},
+'paint' : {
+ 'circle-color' : {
+  property:'color',
+type: 'identity'
+},
+ 'circle-radius': {
+ 'stops': [[5, 6],[6, 5.6],[7, 5.2],[8, 4.8],[9, 4.6],[10, 4.2],[11, 3.8],[12, 3.4],[13, 3],[14, 2.8],[15, 2.4],[16, 3]]},
+  'circle-opacity' : 0.8
+}
+});
+});
+</script>
+</body>
+</html>

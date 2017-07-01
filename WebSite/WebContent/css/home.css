@@ -1,0 +1,27 @@
+html, body, .container-full {
+  height: 100%;
+}
+
+.navbar{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.footer{
+	height:2%;
+}
+ #map-container {
+  height: calc(100% - 10%);
+}
+#map{
+		
+	height: 100%;
+}
+
+ #locations {
+position: absolute;
+}
+.mapboxgl-popup {
+  max-width: 600px;
+  border: none;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}

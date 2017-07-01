@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>WebSite</display-name>
+  <welcome-file-list>
+    <welcome-file>/index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>PointController</servlet-name>
+    <servlet-class>controller.PointController.java</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PointController</servlet-name>
+    <url-pattern>/map?action=init</url-pattern>
+    <url-pattern>/map?action=CriticalPoints</url-pattern>
+    <url-pattern>/map?action=SimplePoints</url-pattern>
+    <url-pattern>/map?action=IRI</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>home</servlet-name>
+    <jsp-file>/jsp/home.jsp</jsp-file>
+  </servlet>
+</web-app>
