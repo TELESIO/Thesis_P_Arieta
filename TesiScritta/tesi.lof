@@ -1,25 +1,39 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Examples of Walking Profiler (left) and Disptick Profiler (right).\relax }}{6}{figure.caption.13}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Examples of contact less profilometers mounted on vehicle.\relax }}{7}{figure.caption.15}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Examples of Walking Profiler (left) and Disptick Profiler (right).\relax }}{6}{figure.caption.9}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Examples of contact less profilometers mounted on vehicle.\relax }}{7}{figure.caption.10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces International Roughness Index Scale defined by Sayers and Karamihas \cite {little_book} Representing the characteristic of road roughness in function of IRI.\relax }}{12}{figure.caption.17}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Information Quality Level Conception\relax }}{15}{figure.caption.18}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Quarter Car Model and Frequency Response\relax }}{18}{figure.caption.20}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces International Roughness Index Scale defined by Sayers and Karamihas \cite {little_book} Representing the characteristic of road roughness in function of IRI.\relax }}{12}{figure.caption.11}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Information Quality Level Conception\relax }}{15}{figure.caption.12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Quarter Car Model and Frequency Response\relax }}{18}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Examples of IMU box.\relax }}{22}{figure.caption.22}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Frame of car respect Yaw, Pitch, and Roll Angle.\relax }}{23}{figure.caption.23}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Sample view of the principals sensors inside smartphone\relax }}{27}{figure.caption.24}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Internal structure of smartphone accelerometer sensor\relax }}{28}{figure.caption.26}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Internal structure of smartphone gyroscopes sensor\relax }}{29}{figure.caption.28}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Triangulation technique\relax }}{31}{figure.caption.30}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Examples of IMU box.\relax }}{22}{figure.caption.16}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Frame of car respect Yaw, Pitch, and Roll Angle.\relax }}{23}{figure.caption.17}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Sample view of the principals sensors inside smartphone\relax }}{27}{figure.caption.18}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Internal structure of smartphone accelerometer sensor\relax }}{28}{figure.caption.19}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Internal structure of smartphone gyroscopes sensor\relax }}{29}{figure.caption.20}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Triangulation technique\relax }}{31}{figure.caption.21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Integration using Rectangular (left) and Trapezoidal (right) methods of Sine Wave.\relax }}{37}{figure.caption.34}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces The result of double integration of a Raw Signal\relax }}{38}{figure.caption.35}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Integration using Rectangular (left) and Trapezoidal (right) methods of Sine Wave.\relax }}{37}{figure.caption.24}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The result of double integration of a Raw Signal\relax }}{38}{figure.caption.25}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acceleration}}}{38}{subfigure.2.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Velocity}}}{38}{subfigure.2.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Displacement}}}{38}{subfigure.2.3}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Correct alignment of smartphone respect to the vehicle cartesian frame.\relax }}{39}{figure.caption.36}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces The result of reorientation of raw data\relax }}{40}{figure.caption.37}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Correct alignment of smartphone respect to the vehicle cartesian frame.\relax }}{39}{figure.caption.26}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The result of reorientation of raw data\relax }}{40}{figure.caption.27}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Raw}}}{40}{subfigure.4.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Reoriented}}}{40}{subfigure.4.2}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Application of Engine Vibrations Filter\relax }}{42}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acceleration}}}{42}{subfigure.5.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Without Engine Vibrations}}}{42}{subfigure.5.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Overlapping}}}{42}{subfigure.5.3}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Application of Zero Velocity Filter\relax }}{44}{figure.caption.29}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acceleration}}}{44}{subfigure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {No Zero Velocity}}}{44}{subfigure.6.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Overlapping}}}{44}{subfigure.6.3}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Application of Moving Average Filter\relax }}{47}{figure.caption.30}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Unfiltered}}}{47}{subfigure.7.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Filtered}}}{47}{subfigure.7.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Overlapping}}}{47}{subfigure.7.3}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Start and End points\relax }}{49}{figure.caption.31}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Start and End points\relax }}{51}{figure.caption.32}
