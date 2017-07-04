@@ -1,6 +1,6 @@
-	\documentclass[11pt,a4paper]{book}
+\documentclass[11pt,a4paper]{book}
 \frontmatter
-\usepackage{standalone}
+\usepackage{subfiles}
 \usepackage{blindtext}
 \usepackage[newcentury]{quotchap}
 \usepackage[left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry}
@@ -16,6 +16,7 @@
 \usepackage{subfig}
 \usepackage{amstext} 
 \usepackage{float} 
+\usepackage{xr-hyper}
 \usepackage{pseudocode}
 
 
@@ -92,19 +93,21 @@
 
 
 
-\include{Sections/Abstract/Abstract_EN}
+\subfile{Sections/Abstract/Abstract_EN}
 \addcontentsline{toc}{section}{\textbf{Abstract}}
-\include{Sections/Abstract/Abstract_IT}
+\subfile{Sections/Abstract/Abstract_IT}
 \mainmatter
 \setcounter{secnumdepth}{5}
 \thispagestyle{empty}
-\include{Chapters/Chapter1}
+\subfile{Chapters/Chapter1}
 \thispagestyle{empty}
-\include{Chapters/Chapter2}
+\subfile{Chapters/Chapter2}
 \thispagestyle{empty}
-\include{Chapters/Chapter3}
+\subfile{Chapters/Chapter3}
 \thispagestyle{empty}
-\include{Chapters/Chapter4}
+\subfile{Chapters/Chapter4}
+\thispagestyle{empty}
+\subfile{Chapters/Chapter5}
 \thispagestyle{empty}
 \section*{Acknowledgments}
 \addcontentsline{toc}{section}{\textbf{Acknowledgments}}

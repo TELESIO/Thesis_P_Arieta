@@ -1,11 +1,15 @@
-\documentclass{standalone}
+\documentclass[tesi]{subfiles}
+\IfEq{\jobname}{\detokenize{tesi}}{}{%
+    \externaldocument{Chapter1}
+}
+
 \begin{document}
 	\chapter{International Roughness Index}
-\label{IRI}
+\label{ch:IRI}
 The International Roughness Index (IRI) \cite{sayers1986guidelines}, was introduced in 1986 by The World Bank.\cite{sayers1986guidelines}\cite{sayers1986international}\\It represents the most used road roughness index to evaluate and manage road infrastructure. \\IRI is defined as the ratio between the sum of vehicle-wheel displacements of a standard vehicle, traveling at \num{80} \si{\km\per\hour} along a roadway\cite{sayers1995calculation}. \\It is calculated using the "quarter-car" mathematical model, whose response is accumulated in order to produce a roughness index with slope units ( in  mile$^{-1}$ , $\si{\meter\per\km}$  etc...) \cite{little_book}\\
 The measurement of IRI is required for all the data provided to the United States Federal Highway Administration, and it is covered by several standards from ASTM International, such as the ASTM E1364 - 95 (2005) \cite{astm2}. In addition, the IRI is also used to evaluate a new pavement construction, i.e. to determine penalties or bonus payments based on its smoothness.
 
-\section{History}\label{IRI_History}
+\section{History}\label{sc:IRI_History}
 \noindent In the early $1980s$, in the United States of America, some highway engineering companies identified the road roughness as the main indicator to determine the level of comfort of a road network used by different road users, from pedestrians to driver. \\There were already some methodologies used to determine the roughness at that time; however, they were different among the various agencies and neither reproducible or stable over time.\\\\
 For this reason, the United States National Cooperative Highway Research Program (NCHRP) started a research project in order to help the state agencies to improve the utilization of their own methodology for evaluating the road roughness\cite{gillespie1980calibration}.\\The project was then continued by The World Bank\cite{sayers1986guidelines} under the name of \textbf{\textit{International Road Roughness Experiment}} (IRRE)\cite{sayers1986internationalscale}, whose main goal was to determine a way to compare or to convert the data obtained from different countries, all involved in The World Bank's projects.\\\\
 After several studies, the results showed that the majority of used methodologies and instruments was able to produce significant measurements\cite{sayers1986international} of road roughness. Thus, all those methodologies were standardised and the measurement was referenced to a single, common scale.\\
@@ -19,7 +23,7 @@ Representing the characteristic of road roughness in function of IRI.}
 \end{figure}
 \clearpage
 
-\section{Definition}\label{IRI Definition}
+\section{Definition}\label{sc:IRI Definition}
 IRI is defined as a mathematical model of a bidimensional road profile. This road profile represents the vertical elevation of the road surface as a function of the longitudinal distance along the travelling distance\cite{wang2006road}. So, its aim is to show how the elevation varies depending on the length of the road in question.
 \\The roughness measurement is difficult and complex because it depends on the vehicle characteristics and the suspension system, and also from the actual road pavement conditions. It can be calculated from profiles that are obtained by any valid measurement method, such as high-speed inertial profiling systems.\\
 The Quarter-Car mathematical model replicates road roughness measurements that were used by highway agencies between 1970 and 1980. The IRI is statistically equivalent to the other already-in-use methodologies, i.e. the correlation among the IRI and any type of RTRRMS, is as good as the correlation between two RTRRMS measurements.
@@ -29,7 +33,7 @@ IRI scale has been chosen for compatibility with previous measures of the roughn
 The frequency content of the movement of the suspension is very similar to the frequency content of the vertical acceleration of the chassis: a very important correlation. In fact, the overall level of vibrations is similar to the overall load level of vibrations of the pavement and, despite the IRI is not suitable for the calculation of all types of vehicles, the results between these two types of data collection are almost equals, thanks to that correlation. Furthermore, this type of correlation is crucial both to demonstrate that this index can be calculated with any type of vehicle and through any inertial measuring device.
 
 \section{Measurement}\label{Measurement of IRI}
-IRI is evaluated by the road profile. It can be calculated in many ways: one of them is to use profilometers, classified as static or dynamic instruments by the World Bank, as we saw in section(\ref{profilometers} at page \pageref{profilometers}).\\Static instruments are then divided into two classes (\ref{Instrument_Contact} at page: \pageref{Instrument_Contact}); the dynamic ones can be also grouped in another class: the Class 3 (in World Bank's terminology).\\ The most common measurements are done with Class 1 instruments, capable of directly measuring the road profile. Class2 instruments are frequently used, and latest Class 3 instruments, which use correlation equations.
+IRI is evaluated by the road profile. It can be calculated in many ways: one of them is to use profilometers, classified as static or dynamic instruments by the World Bank, as we saw in section(\ref{ssc:profilometers} at page \pageref{ssc:profilometers}).\\Static instruments are then divided into two classes (\ref{ssc:Instrument_Contact} at page: \pageref{ssc:Instrument_Contact}); the dynamic ones can be also grouped in another class: the Class 3 (in World Bank's terminology).\\ The most common measurements are done with Class 1 instruments, capable of directly measuring the road profile. Class2 instruments are frequently used, and latest Class 3 instruments, which use correlation equations.
 
 \subsection{Motivation of Correlation Equations}
 RTRRMSs (Class 3): \cite{little_book} \textit{Calibration by correlation equation is required for a RTRRMS for many reasons}, including these important three:
@@ -44,7 +48,7 @@ RTRRMSs (Class 3): \cite{little_book} \textit{Calibration by correlation equatio
 \noindent Using World Bank terminology, these correspond to Information Quality Level (IQL) $1$ and IQL-$3$ devices, representing the relative accuracy of the measurements\cite{bennett2006data}. IQL-1 systems measure the profile direction, independent of speed, and IQL-3 systems typically have correlation equations for different speeds to relate the actual measurements to IRI.
 IQL-$1$ systems typically report the roughness at \numrange{10}{20} \si{\meter} intervals; IQL-3 at $100$\si{\meter}$+$ intervals.
 
-\subsection{Information Quality Level}\label{Information Quality Level}
+\subsection{Information Quality Level}\label{ssc:Information Quality Level}
 \noindent As described in Bennett and Paterson\cite{bennett2000guide}, imagine looking out of an airplane window. Is possible recognise the landscape by a line of a river or like a highway cuts through the landscape. The plane draws nearer, and you can recognise out your neighbourhood, then your home, your car. You have been looking at the same spot throughout the descent, but the \textit{“information”} available to you become more accurate. While from high above you had enough macro-level information to determine what town you were looking at, you needed a different kind of micro-level information to determine precisely where your car was
 \\\\
 Is just experienced first hand the principle behind Information Quality Levels (IQL), introduced by Paterson and others\cite{paterson2}.\\ IQL helps to structure road management information into different levels that correlate to the degree of sophistication required for decision making and methods for collecting and processing data.
@@ -141,8 +145,8 @@ may be computed from more detailed data.
 \end{table}
 \clearpage
 
-\subsection{Quarter Car Model}\label{Quarter Car Model}
-For the calculation of the IRI index, it is necessary to define a standard reference vehicle,\cite{little_book}. This vehicle, for reasons of simplifying the index calculation process, was identified in the quarter-car model shown in Fig. \ref{Quarter Car Model}. This model is two-dimensional because only
+\subsection{Quarter Car Model}\label{ssc:Quarter Car Model}
+For the calculation of the IRI index, it is necessary to define a standard reference vehicle,\cite{little_book}. This vehicle, for reasons of simplifying the index calculation process, was identified in the quarter-car model shown in Fig. \ref{fig:Quarter Car Model}. This model is two-dimensional because only
 movement in the $Z$ direction is taken into consideration. This model schematizes the vehicle with a sprung mass and a unsprung mass, connected by a shock absorber and a suspension, identified by a spring with own elastic constant and connected to the road pavement through the tire, also simplified with a spring of an elastic constant\cite{little_book}.
 
 \begin{figure}[ht]
@@ -227,7 +231,7 @@ It presents the following coefficient values for the quarter of a vehicle:
 \noindent About the frequency response of the model, at very low frequencies (corresponding to long wavelengths in the road) the suspension response is zero because the wheel and the vehicle body move up and down together. The response is maintained up through frequencies near $10$ $Hz$ where axle resonance occurs. Above the axle resonant frequency the response again drops to zero as the road bumps simply deflect the tire without producing significant suspension stroke.
 The frequency response of the quarter car extends from approximately $0.5$ to $20$ $Hz$.
 
-\section{Calculation of IRI}\label{Calculation of IRI}
+\section{Calculation of IRI}\label{sc:Calculation of IRI}
 Note the values, instant for instant, of the displacement velocities $Z_{s}$  and $Z_{u}$ obtained by integrating from the system of equations describing the motion of the Quarter car model, the calculation of the IRI is performed by the formula:
 \begin{center}
 {\LARGE $IRI = \frac{1}{L} \int_{0}^{\frac{L}{V}} | \dot{Z_{s}} - \dot{Z_{u}} | dt$}

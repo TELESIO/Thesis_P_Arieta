@@ -23,5 +23,11 @@
 \BOOKMARK [1][-]{section.4.2}{Data Filtering}{chapter.4}% 23
 \BOOKMARK [2][-]{subsection.4.2.1}{Preliminary Filtering}{section.4.2}% 24
 \BOOKMARK [2][-]{subsection.4.2.2}{Digital Filtering}{section.4.2}% 25
-\BOOKMARK [1][-]{section.4.3}{GPS points division}{chapter.4}% 26
-\BOOKMARK [1][-]{section*.33}{Acknowledgments}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.3}{Fast Fourier Transform}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.4}{GPS points division}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.4.1}{Haversine Formula}{section.4.4}% 28
+\BOOKMARK [0][-]{chapter.5}{System Development}{}% 29
+\BOOKMARK [1][-]{section.5.1}{Data Collect}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.2}{Data Processing}{chapter.5}% 31
+\BOOKMARK [2][-]{subsection.5.2.1}{Simple Acceleration Points}{section.5.2}% 32
+\BOOKMARK [1][-]{section*.44}{Acknowledgments}{chapter.5}% 33

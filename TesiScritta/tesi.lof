@@ -35,5 +35,19 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Unfiltered}}}{47}{subfigure.7.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Filtered}}}{47}{subfigure.7.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Overlapping}}}{47}{subfigure.7.3}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Start and End points\relax }}{49}{figure.caption.31}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Start and End points\relax }}{51}{figure.caption.32}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Example of Low Pass Filter\relax }}{49}{figure.caption.31}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Filter Response}}}{49}{subfigure.8.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Unfiltered}}}{49}{subfigure.8.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Filtered}}}{49}{subfigure.8.3}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Example of Application of High Pass Filter\relax }}{51}{figure.caption.32}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Filter Response}}}{51}{subfigure.9.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Unfiltered}}}{51}{subfigure.9.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Filtered}}}{51}{subfigure.9.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Overlapped}}}{51}{subfigure.9.4}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Band Pass Filter Response\relax }}{52}{figure.caption.33}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Fast Fourier Transform\relax }}{54}{figure.caption.35}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Start and End points\relax }}{55}{figure.caption.36}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Start and End points\relax }}{57}{figure.caption.37}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Haversine Example\relax }}{59}{figure.caption.38}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces System Structure\relax }}{62}{figure.caption.39}

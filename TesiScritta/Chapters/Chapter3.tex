@@ -1,8 +1,8 @@
-\documentclass{standalone}
-\begin{document}
+\documentclass[tesi]{subfiles}
 
+\begin{document}
 \chapter{Inertial Measurement Unit}
-\label{Inertial Measurement Unit}
+\label{ch:Inertial Measurement Unit}
 Inertial sensors, called Inertial Measurement Unit (\textbf{IMU}), is an electronic device of measurement that allows to estimate specific force, angular velocity and sometimes magnetic field of a body from the inertial forces that the body experiences. Its operation principle is based on the use and combination of forces from accelerometers, gyroscopes, and sometimes magnetometers\\
 \noindent The inertial technology is based on the first two Newton’s laws. \\
 \textit{The first law, affirms that the movement of a body is uniform and linear unless an external force is acting on it.} \\
@@ -16,7 +16,7 @@ $ \textbf{F = ma} $
 If we know the magnitude and direction of the forces applied to a body and its mass, we can know its acceleration. Speed and position are obtained from the acceleration versus time, by first and second mathematical integration.\\
 Recent developments allow the production of IMU compatible with GPS devices. An IMU allows a GPS receiver to operate when GPS signals are not available, e.g. in tunnels, buildings or in the presence of electronic interference\cite{gpssystem} 
 \newpage
-\section{Operational Principles}\label{Operational Principles}
+\section{Operational Principles}\label{sc:Operational Principles}
 An IMU is a single unit into an electronics module which detects and collects angular velocity using one or more gyroscopes, linear acceleration data using one or more accelerometers and sometimes magnetic fields by using one or more magnetometer.\\
 A typical configuration of IMU contains two separate sensors. \\First is the three-axial accelerometer. It 
 generates three signals describing the accelerations along each of its axes. Second is the three-axial gyroscopes, it  outputs three analogue signals, and describe the vehicle angular velocity for each of the sensor axes.\\ Another possible configuration, contains also a three-axial magnetometer that produced three signal along each axis that describing the magnetic-field around the body.
@@ -43,7 +43,7 @@ generates three signals describing the accelerations along each of its axes. Sec
 \clearpage	
 	
 	
-\subsection{Uses}\label{IMU Uses}
+\subsection{Uses}\label{ssc:IMU Uses}
 \noindent Nowadays, IMU are often incorporated into Inertial Navigation Systems (INS), which use the raw IMU measurements, and after a processing and combination of these, is possible determine attitude, angular velocity, linear velocity and position relative to a global reference frame\footnote{a reference frame consists of an abstract coordinate system and the set of physical reference points that uniquely fix the coordinate system and standardize measurements.}, in our case the frame of the vehicle, as is shown in the Figure\ref{fig:Yaw Roll Pitch Frame of car}.\\ 
 The IMU are highly applied for the navigation and control of the military, civil, and many commercial vehicles for real-time monitoring, and for geodetic navigation through post-processing of data.\\
 Finding, ample space for use in space navigation systems, cars, ships, planes and aeroplanes.\\
@@ -51,14 +51,14 @@ Finding, ample space for use in space navigation systems, cars, ships, planes an
 The process to obtain velocity from acceleration and position from velocity, is known as dead reckoning. \footnote{The idea is to start from a known state (e.g. holding still) and calculate a new state (e.g. moving up or down) based on a measurement that indicates change, although it does not actually give you the info you want directly.}
 In land vehicles, an IMU can be integrated into GPS based automotive navigation systems\footnote{An automotive navigation system is part of the automobile controls or a third party add-on used to find direction in an automobile. It typically uses a satellite navigation device to get its position data which is then correlated to a position on a road} or vehicle tracking systems\footnote{A vehicle tracking system combines the use of automatic vehicle location in individual vehicles with software that collects these data for a comprehensive picture of vehicle locations}, giving at the system a dead reckoning capability and the ability to gather as much accurate data as possible about the vehicle's current speed, turn rate, inclination and acceleration. \\
 Besides navigational purposes, IMU serve as orientation sensors in many consumer products. Smartphones and Tablets contain IMU as orientation sensors. Fitness trackers and other wearable devices may also include IMU to measure motion.  They are a competing technology for use in motion capture technology\cite{motioncapture}.\clearpage
-\section{Inertial Navigation System}\label{Inertial Navigation System}
+\section{Inertial Navigation System}\label{sc:Inertial Navigation System}
 An inertial navigation system (INS) is able to process the reported IMU data by a processor, like motion sensors (accelerometers) and rotation sensors (gyroscopes) to continuously calculate via dead reckoning the position, orientation, and velocity of a moving object without the need for external references\cite{basicprincipleaereo}.\\ 
 The guidance system could show at pilot where the vehicle is located geographically at a certain moment, as with a GPS navigation system, but without the need to communicate with or receive communication from any outside components, such satellites. External sources are however used in order to correct drift errors.\\\\Recent advances in the construction of microelectromechanical systems (MEMS)\footnote{MEMS is the technology of microscopic devices, particularly those with moving parts.} have made the possibility to manufacture small and light inertial navigation systems, they are widely used in mobile devices, thanks to their small size without compromising performance.\\
 
 
 
-\subsection{Principal Sensors}\label{Principal Sensors}
-The main sensors of IMU system as we have discusses in the introduction\ref{Operational Principles} are the Accelerometer and Gyroscopes:
+\subsection{Principal Sensors}\label{ssc:Principal Sensors}
+The main sensors of IMU system as we have discusses in the introduction\ref{sc:Operational Principles} are the Accelerometer and Gyroscopes:
 \begin{description}
 
 \item [Accelerometer]: measure the linear acceleration of the moving vehicle in the sensor or body frame, but in directions that can only be measured relative to the moving system (the accelerometers are fixed to the system and rotate with the system, but are not aware of their own orientation). This can be thought as the ability of a blindfolded passenger in a car to feel themselves pressed back into their seat as the vehicle accelerates forward or pulled forward as it slows down; and feel themselves pressed down into their seat as the vehicle accelerates up a hill or rise up out of their seat as the car passes over the crest of a hill and begins to descend. Based on this information alone, they know how the vehicle is accelerating relative to itself, that is, whether it is accelerating forward, backward, left, right, up (toward the car's ceiling), or down (toward the car's floor) measured relative to the car, but not the direction relative to the Earth, since they did not know what direction the car was facing relative to the Earth when they felt the accelerations.
@@ -72,7 +72,7 @@ Note that the accelerometers will actually detect a force that is directed in th
 \noindent An INS system is useful for a real-time monitoring but is possible getting the information about the velocity and position after processing IMU data when the travel is finished and the data are sent to a server or are stored into a device.
 
 
-\section{Smartphone Sensors}\label{Smartphone Sensors}
+\section{Smartphone Sensors}\label{sc:Smartphone Sensors}
 Nowadays, smartphones are widely used in the world, and they are equipped with many sensors such as an accelerometer, gyroscope, touch-screen, ambient light sensor, proximity sensor, magnetometer, barometer, heart pulse rate monitor, for the purpose of this work the main sensor used is the accelerometer. Smartphone sensors are very cheap, and their size is getting smaller and smaller, in fact,they are also called Micro Electro-Mechanical-Systems (MEMS), motion sensors, and can offer great data results if compared with more both expensive and professional, so the information given by IMU is useful if the relations between the smartphone reference system, the vehicle reference system and the world reference system are known, in fact, by getting this information in real-time from the motion sensor is possible create an inertial navigation system by sensor data or process after the travel is finished if the data are stored, in fact there are many applications to allow the registration of the smartphone sensors data, it also be useful combine the use of the GPS.\\\\
 
 \noindent These sensors are capable of providing raw data with high precision and accuracy, and are useful to monitoring three-dimensional device movement or positioning, or changes in the ambient environment near a device.\\\\
@@ -183,7 +183,7 @@ However, there are still many sensors available within smartphones, and they are
 \item[Fingerprint sensors]: the sensor is most convenient to use, as it does not require swiping in order to read fingerprint data.
 \end{description}
 \clearpage
-\section{Error}\label{Error}
+\section{Error}\label{sc:Error}
 The major disadvantage of using IMU for navigation is that they typically suffer from accumulated error. Because the guidance system is continually integrating acceleration respect to the time to calculate velocity and position, any measurement errors, however small they are, are accumulated over time. This leads to \textit{"drift"}: an ever-increasing difference between where the system thinks it is located and the actual location. For the integration, a constant error in acceleration results in a linear error in velocity and a quadratic error growth in position.\cite{siciliano2016springer}\\
 Signals from the IMU are processed by signal processing at a very high rate. For example, in a $100 Hz$ IMU, the sample period represents the total motion of the IMU over $10$ $ \si{milli\second}$. 
 To reduce the effect of the measurement errors, they must be understood, estimated and then corrected
