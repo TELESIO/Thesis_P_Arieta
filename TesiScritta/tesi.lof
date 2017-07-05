@@ -51,3 +51,11 @@
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Haversine Example\relax }}{59}{figure.caption.38}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces System Structure\relax }}{62}{figure.caption.39}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Raw Accelerometer Signal\relax }}{65}{figure.caption.40}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Signal after application of the filter\relax }}{66}{figure.caption.41}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Signal after application of the filter\relax }}{66}{figure.caption.42}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Final Result\relax }}{67}{figure.caption.43}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Original Signal\relax }}{68}{figure.caption.44}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Signal Without Engine Vibrations\relax }}{69}{figure.caption.45}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Null Velocity Removed\relax }}{69}{figure.caption.46}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Results Final\relax }}{70}{figure.caption.47}

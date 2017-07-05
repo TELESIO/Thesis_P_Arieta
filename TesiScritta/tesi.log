@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.7)  4 JUL 2017 23:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.7)  5 JUL 2017 12:32
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1017,24 +1017,7 @@ File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 )
 \@quotelevel=\count447
 \@quotereset=\count448
- (tesi.aux
-
-LaTeX Warning: Label `fig:Sample smartphone accelerometer sensors' multiply def
-ined.
-
-
-LaTeX Warning: Label `fig:Raw Accelerometer' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:Raw Accelerometer' multiply defined.
-
-
-LaTeX Warning: Label `fig:Velocity' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:Velocity' multiply defined.
-
-)
+ (tesi.aux)
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
@@ -1051,7 +1034,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count449
 \scratchdimen=\dimen193
@@ -1165,7 +1149,7 @@ Package caption Info: End \AtBeginDocument code.
 \c__siunitx_mathsf_int=\count457
 \c__siunitx_mathtt_int=\count458
 
-<images/UniversityLogo.png, id=135, 148.555pt x 93.34875pt>
+<images/UniversityLogo.png, id=139, 148.555pt x 93.34875pt>
 File: images/UniversityLogo.png Graphic file (type png)
 
 <use images/UniversityLogo.png>
@@ -1183,37 +1167,46 @@ LaTeX Font Info:    Try loading font information for T1+pnc on input line 85.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pnc.fd"
 File: t1pnc.fd 2001/06/04 font definitions for T1/pnc.
-) (tesi.toc [3])
+)
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
 \tf@toc=\write7
 \openout7 = `tesi.toc'.
 
-
-[4] (tesi.lof
-Overfull \hbox (26.86075pt too wide) in paragraph at lines 6--6
- [][] [][]\OT1/cmr/m/n/10.95 International Rough-ness In-dex Scale de-fined by 
-Say-ers and Karami-has [[]13[]] Rep-re-sent-ing 
- []
-
-)
-\tf@lof=\write8
-\openout8 = `tesi.lof'.
-
- [5
-
-]
+[3]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6] (tesi.lot)
+[4
+
+]
+
+Package hyperref Warning: old lof file detected, not used; run LaTeX again.
+
+\tf@lof=\write8
+\openout8 = `tesi.lof'.
+
+[5]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6
+
+]
+
+Package hyperref Warning: old lot file detected, not used; run LaTeX again.
+
 \tf@lot=\write9
 \openout9 = `tesi.lot'.
 
- [7
-
-] (Sections/Abstract/Abstract_EN.tex
+[7] (Sections/Abstract/Abstract_EN.tex
 Overfull \hbox (1.43234pt too wide) in paragraph at lines 9--11
 \OT1/cmr/m/n/10.95 The de-scrip-tion about the qual-ity of the road sur-face is
  done through the anal-y-sis of a lon-gi-tu-di-nal
@@ -1295,6 +1288,46 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 
+LaTeX Warning: Reference `ch:Introduction' on page 3 undefined on input line 29
+.
+
+
+LaTeX Warning: Reference `sc:Instruments' on page 3 undefined on input line 29.
+
+
+
+LaTeX Warning: Reference `ssc:profilometers' on page 3 undefined on input line 
+29.
+
+
+LaTeX Warning: Reference `ssc:profilometers' on page 3 undefined on input line 
+29.
+
+
+LaTeX Warning: Reference `sc:Motivation' on page 3 undefined on input line 29.
+
+
+LaTeX Warning: Reference `sc:Motivation' on page 3 undefined on input line 29.
+
+
+LaTeX Warning: Reference `ch:IRI' on page 3 undefined on input line 30.
+
+
+LaTeX Warning: Reference `ch:Inertial Measurement Unit' on page 3 undefined on 
+input line 31.
+
+
+LaTeX Warning: Reference `ch:Data Analysis' on page 3 undefined on input line 3
+2.
+
+
+LaTeX Warning: Reference `ch:System Development' on page 3 undefined on input l
+ine 33.
+
+
+LaTeX Warning: Reference `it:indexes' on page 3 undefined on input line 33.
+
+
 LaTeX Warning: Reference `ChapterVI' on page 3 undefined on input line 34.
 
 
@@ -1303,13 +1336,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--35
  []
 
 
-Overfull \hbox (7.9448pt too wide) in paragraph at lines 27--35
-\OT1/cmr/m/n/10.95 The []In-tro-duc-tion[] Chap-ter dis-cusses the main in-stru
--ments\OT1/cmr/m/n/9 ([]1.1[]) \OT1/cmr/m/n/10.95 used for the road sur-face mo
-n-i-tor-ing,
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 27--35
 
  []
@@ -1325,14 +1351,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--35
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--35
-
+Overfull \hbox (3.04425pt too wide) in paragraph at lines 27--35
+\OT1/cmr/m/n/10.95 Then, Chapter[] an-a-lyzes how these data can be pro-cessed 
+in or-der to get road sur-face con-di-tions,
  []
 
 
-Overfull \hbox (0.7935pt too wide) in paragraph at lines 27--35
-\OT1/cmr/m/n/10.95 smart-phones, to how the listed-above in-dexes[]1[], whose e
-lab-o-ra-tion is also ex-pli-cated, are dis-played
+Underfull \hbox (badness 10000) in paragraph at lines 27--35
+
  []
 
 
@@ -1375,6 +1401,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [4
 
 ]
+
+LaTeX Warning: Reference `table:iso_wave' on page 5 undefined on input line 78.
+
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
@@ -1387,14 +1418,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5
 
-] <images/Walking_Profiler.jpg, id=346, 623.32875pt x 803.0pt>
+] <images/Walking_Profiler.jpg, id=245, 623.32875pt x 803.0pt>
 File: images/Walking_Profiler.jpg Graphic file (type jpg)
 
 <use images/Walking_Profiler.jpg>
 Package pdftex.def Info: images/Walking_Profiler.jpg used on input line 117.
 (pdftex.def)             Requested size: 93.49527pt x 120.4448pt.
 
-<images/Dipstick_Profiler.png, id=347, 803.0pt x 1428.33624pt>
+<images/Dipstick_Profiler.png, id=246, 803.0pt x 1428.33624pt>
 File: images/Dipstick_Profiler.png Graphic file (type png)
 
 <use images/Dipstick_Profiler.png>
@@ -1419,7 +1450,7 @@ Overfull \hbox (5.50809pt too wide) in paragraph at lines 124--125
  road sur-face (height be-tween the pro-filome-ter
  []
 
-<images/High_Speed_Profilometer2.jpg, id=356, 803.0pt x 552.0625pt>
+<images/High_Speed_Profilometer2.jpg, id=257, 803.0pt x 552.0625pt>
 File: images/High_Speed_Profilometer2.jpg Graphic file (type jpg)
 
 <use images/High_Speed_Profilometer2.jpg>
@@ -1427,7 +1458,7 @@ Package pdftex.def Info: images/High_Speed_Profilometer2.jpg used on input line
  129.
 (pdftex.def)             Requested size: 208.77507pt x 143.53285pt.
 
-<images/High_Speed_Profilometer.jpg, id=357, 401.5pt x 295.1025pt>
+<images/High_Speed_Profilometer.jpg, id=258, 401.5pt x 295.1025pt>
 File: images/High_Speed_Profilometer.jpg Graphic file (type jpg)
 
 <use images/High_Speed_Profilometer.jpg>
@@ -1467,7 +1498,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8]) (Chapters/Chapter2.tex [9
+[8]
+
+LaTeX Warning: Reference `ssc:profilometers' on page 9 undefined on input line 
+164.
+
+) (Chapters/Chapter2.tex [9
 
 ]
 
@@ -1486,7 +1522,7 @@ Overfull \hbox (1.06604pt too wide) in paragraph at lines 9--11
 n-tro-duced in 1986 by The World Bank.[[]17[]][[]20[]] 
  []
 
-<images/iri_scale.jpg, id=401, 492.94162pt x 287.27325pt>
+<images/iri_scale.jpg, id=302, 492.94162pt x 287.27325pt>
 File: images/iri_scale.jpg Graphic file (type jpg)
 
 <use images/iri_scale.jpg>
@@ -1532,6 +1568,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--34
  []
 
 
+LaTeX Warning: Reference `ssc:profilometers' on page 13 undefined on input line
+ 36.
+
+
+LaTeX Warning: Reference `ssc:profilometers' on page 13 undefined on input line
+ 36.
+
+
+LaTeX Warning: Reference `ssc:Instrument_Contact' on page 13 undefined on input
+ line 36.
+
+
+LaTeX Warning: Reference `ssc:Instrument_Contact' on page 13 undefined on input
+ line 36.
+
+
 Overfull \hbox (4.32187pt too wide) in paragraph at lines 36--37
 \OT1/cmr/m/n/10.95 The most com-mon mea-sure-ments are done with Class 1 in-str
 u-ments, ca-pa-ble of di-rectly mea-sur-ing
@@ -1574,8 +1626,8 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Package caption Warning: \label without proper reference on input line 97.
-See the caption package documentation for explanation.
+LaTeX Warning: Reference `fig:Information Quality Level Conception' on page 14 
+undefined on input line 56.
 
 
 LaTeX Warning: Reference `table:iql_detail' on page 14 undefined on input line 
@@ -1621,7 +1673,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14] <images/iql.jpg, id=443, 474.27188pt x 298.11375pt>
+[14] <images/iql.jpg, id=339, 474.27188pt x 298.11375pt>
 File: images/iql.jpg Graphic file (type jpg)
  <use images/iql.jpg>
 Package pdftex.def Info: images/iql.jpg used on input line 71.
@@ -1660,7 +1712,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17
 
-] <images/quarter_car_model.png, id=461, 500.16862pt x 276.13162pt>
+]
+
+LaTeX Warning: Reference `fig:Quarter Car Model' on page 18 undefined on input 
+line 149.
+
+<images/quarter_car_model.png, id=358, 500.16862pt x 276.13162pt>
 File: images/quarter_car_model.png Graphic file (type png)
 
 <use images/quarter_car_model.png>
@@ -1714,7 +1771,7 @@ ass will pro-duce a pro-por-tional ac-cel-er-a-tion.
 
 [21
 
-] <images/imusensor.jpg, id=492, 351.3125pt x 349.305pt>
+] <images/imusensor.jpg, id=391, 351.3125pt x 349.305pt>
 File: images/imusensor.jpg Graphic file (type jpg)
 
 <use images/imusensor.jpg>
@@ -1728,7 +1785,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22 <./images/imusensor.jpg>]
-<images/yawpitchroll.jpg, id=500, 702.625pt x 462.72874pt>
+<images/yawpitchroll.jpg, id=400, 702.625pt x 462.72874pt>
 File: images/yawpitchroll.jpg Graphic file (type jpg)
 
 <use images/yawpitchroll.jpg>
@@ -1744,10 +1801,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [23
 
  <./images/yawpitchroll.jpg>]
-
-Package caption Warning: \label without proper reference on input line 38.
-See the caption package documentation for explanation.
-
 
 LaTeX Warning: Reference `fig:Yaw Roll Pitch Frame of car' on page 24 undefined
  on input line 47.
@@ -1782,9 +1835,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--57
  []
 
 
-Overfull \hbox (2.37393pt too wide) in paragraph at lines 61--62
+LaTeX Warning: Reference `sc:Operational Principles' on page 25 undefined on in
+put line 61.
+
+
+Overfull \hbox (0.27507pt too wide) in paragraph at lines 61--62
 \OT1/cmr/m/n/10.95 The main sen-sors of IMU sys-tem as we have dis-cusses in th
-e in-tro-duc-tion[]3.1[] are the Ac-celerom-e-ter
+e introduction[] are the Ac-celerom-e-ter
  []
 
 
@@ -1822,14 +1879,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26] <images/sm_motherboard.jpg, id=538, 811.03pt x 527.9725pt>
+[26] <images/sm_motherboard.jpg, id=437, 811.03pt x 527.9725pt>
 File: images/sm_motherboard.jpg Graphic file (type jpg)
 
 <use images/sm_motherboard.jpg>
 Package pdftex.def Info: images/sm_motherboard.jpg used on input line 89.
 (pdftex.def)             Requested size: 405.514pt x 263.9856pt.
 
-<images/smartphone-accelerometer.png, id=541, 376.40625pt x 253.69781pt>
+
+LaTeX Warning: Reference `fig:Sample smartphone accelerometer sensors' on page 
+27 undefined on input line 100.
+
+<images/smartphone-accelerometer.png, id=439, 376.40625pt x 253.69781pt>
 File: images/smartphone-accelerometer.png Graphic file (type png)
 
 <use images/smartphone-accelerometer.png>
@@ -1859,7 +1920,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--116
 
  []
 
-<images/Gyroscope-smartphone.jpg, id=554, 501.875pt x 222.8325pt>
+<images/Gyroscope-smartphone.jpg, id=454, 501.875pt x 222.8325pt>
 File: images/Gyroscope-smartphone.jpg Graphic file (type jpg)
 
 <use images/Gyroscope-smartphone.jpg>
@@ -1880,7 +1941,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--129
 
  []
 
-<images/Triangulation.png, id=561, 355.3275pt x 219.06844pt>
+
+LaTeX Warning: Reference `fig:Triangulation technique' on page 30 undefined on 
+input line 150.
+
+<images/Triangulation.png, id=461, 355.3275pt x 219.06844pt>
 File: images/Triangulation.png Graphic file (type png)
 
 <use images/Triangulation.png>
@@ -1945,6 +2010,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 Chapter 4.
 
+LaTeX Warning: Reference `ch:Inertial Measurement Unit' on page 35 undefined on
+ input line 12.
+
+
+LaTeX Warning: Reference `sc:Error' on page 35 undefined on input line 12.
+
+
+LaTeX Warning: Reference `sc:Error' on page 35 undefined on input line 12.
+
+
+LaTeX Warning: Reference `sc:Error' on page 35 undefined on input line 13.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
@@ -1983,14 +2061,14 @@ Overfull \hbox (5.40678pt too wide) in paragraph at lines 81--83
 -ence equa-tion for trape-zoidal in-te-gra-tion
  []
 
-<images/RectangularInte.jpg, id=610, 337.86224pt x 255.65512pt>
+<images/RectangularInte.jpg, id=507, 337.86224pt x 255.65512pt>
 File: images/RectangularInte.jpg Graphic file (type jpg)
 
 <use images/RectangularInte.jpg>
 Package pdftex.def Info: images/RectangularInte.jpg used on input line 93.
 (pdftex.def)             Requested size: 185.8248pt x 140.61073pt.
 
-<images/TrapezoidalIntegration.jpg, id=611, 343.2825pt x 249.63263pt>
+<images/TrapezoidalIntegration.jpg, id=508, 343.2825pt x 249.63263pt>
 File: images/TrapezoidalIntegration.jpg Graphic file (type jpg)
 
 <use images/TrapezoidalIntegration.jpg>
@@ -1998,14 +2076,14 @@ Package pdftex.def Info: images/TrapezoidalIntegration.jpg used on input line 9
 5.
 (pdftex.def)             Requested size: 188.80594pt x 137.29837pt.
 
-<images/RawAccelerometer.jpg, id=612, 3137.7225pt x 1750.54pt>
+<images/RawAccelerometer.jpg, id=509, 3137.7225pt x 1750.54pt>
 File: images/RawAccelerometer.jpg Graphic file (type jpg)
 
 <use images/RawAccelerometer.jpg>
 Package pdftex.def Info: images/RawAccelerometer.jpg used on input line 105.
 (pdftex.def)             Requested size: 345.15054pt x 192.56pt.
 
-<images/VelocityIntegration.jpg, id=613, 3164.82375pt x 1753.55125pt>
+<images/VelocityIntegration.jpg, id=510, 3164.82375pt x 1753.55125pt>
 File: images/VelocityIntegration.jpg Graphic file (type jpg)
 
 <use images/VelocityIntegration.jpg>
@@ -2013,7 +2091,7 @@ Package pdftex.def Info: images/VelocityIntegration.jpg used on input line 107.
 
 (pdftex.def)             Requested size: 348.1317pt x 192.89124pt.
 
-<images/DisplacementIntegration.jpg, id=614, 3185.9025pt x 1765.59625pt>
+<images/DisplacementIntegration.jpg, id=511, 3185.9025pt x 1765.59625pt>
 File: images/DisplacementIntegration.jpg Graphic file (type jpg)
 
 <use images/DisplacementIntegration.jpg>
@@ -2036,7 +2114,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [38 <./images/RawAccelerometer.jpg> <./images/VelocityIntegration.jpg> <./image
 s/DisplacementIntegration.jpg>]
-<images/phonecarorientation.png, id=627, 540.0175pt x 236.885pt>
+<images/phonecarorientation.png, id=526, 540.0175pt x 236.885pt>
 File: images/phonecarorientation.png Graphic file (type png)
 
 <use images/phonecarorientation.png>
@@ -2057,18 +2135,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [39
 
  <./images/phonecarorientation.png>]
-<images/raw.jpg, id=640, 3128.68875pt x 1750.54pt>
+<images/raw.jpg, id=540, 3128.68875pt x 1750.54pt>
 File: images/raw.jpg Graphic file (type jpg)
  <use images/raw.jpg>
 Package pdftex.def Info: images/raw.jpg used on input line 149.
 (pdftex.def)             Requested size: 344.15683pt x 192.56pt.
 
-<images/reoriented.jpg, id=641, 3149.7675pt x 1765.59625pt>
+<images/reoriented.jpg, id=541, 3149.7675pt x 1765.59625pt>
 File: images/reoriented.jpg Graphic file (type jpg)
 
 <use images/reoriented.jpg>
 Package pdftex.def Info: images/reoriented.jpg used on input line 151.
 (pdftex.def)             Requested size: 346.4755pt x 194.21619pt.
+
+
+LaTeX Warning: Reference `fig:Integration of Raw Data' on page 40 undefined on 
+input line 159.
+
 
 Underfull \vbox (badness 2221) has occurred while \output is active []
 
@@ -2095,14 +2178,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41] <images/WithRumors.jpg, id=658, 2341.24687pt x 1324.95pt>
+[41]
+
+LaTeX Warning: Reference `sc:Accelerometer Reorientation' on page 42 undefined 
+on input line 209.
+
+<images/WithRumors.jpg, id=557, 2341.24687pt x 1324.95pt>
 File: images/WithRumors.jpg Graphic file (type jpg)
 
 <use images/WithRumors.jpg>
 Package pdftex.def Info: images/WithRumors.jpg used on input line 213.
 (pdftex.def)             Requested size: 234.1384pt x 132.50276pt.
 
-<images/NoRumors.jpg, id=659, 2347.26938pt x 1303.87125pt>
+<images/NoRumors.jpg, id=558, 2347.26938pt x 1303.87125pt>
 File: images/NoRumors.jpg Graphic file (type jpg)
 
 <use images/NoRumors.jpg>
@@ -2113,7 +2201,7 @@ Overfull \hbox (13.63498pt too wide) in paragraph at lines 213--215
 [][][][] 
  []
 
-<images/EngineRumors.jpg, id=660, 3124.67375pt x 1751.54375pt>
+<images/EngineRumors.jpg, id=559, 3124.67375pt x 1751.54375pt>
 File: images/EngineRumors.jpg Graphic file (type jpg)
 
 <use images/EngineRumors.jpg>
@@ -2145,12 +2233,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--229
 
  []
 
+
+LaTeX Warning: Reference `sssc:Remove Engine Vibrations Filter' on page 43 unde
+fined on input line 240.
+
 File: images/NoRumors.jpg Graphic file (type jpg)
 <use images/NoRumors.jpg>
 Package pdftex.def Info: images/NoRumors.jpg used on input line 243.
 (pdftex.def)             Requested size: 232.3768pt x 129.08167pt.
 
-<images/NoVelocity.jpg, id=669, 3161.8125pt x 1759.57375pt>
+<images/NoVelocity.jpg, id=568, 3161.8125pt x 1759.57375pt>
 File: images/NoVelocity.jpg Graphic file (type jpg)
 
 <use images/NoVelocity.jpg>
@@ -2161,7 +2253,7 @@ Overfull \hbox (11.12245pt too wide) in paragraph at lines 243--245
 [][][][] 
  []
 
-<images/NoVelocitySovrapposte.jpg, id=670, 3185.9025pt x 1780.6525pt>
+<images/NoVelocitySovrapposte.jpg, id=569, 3185.9025pt x 1780.6525pt>
 File: images/NoVelocitySovrapposte.jpg Graphic file (type jpg)
 
 <use images/NoVelocitySovrapposte.jpg>
@@ -2188,6 +2280,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [44 <./images/NoVelocity.jpg> <./images/NoVelocitySovrapposte.jpg>]
+
+LaTeX Warning: Reference `fig:Integration of Raw Data' on page 45 undefined on 
+input line 258.
+
+
+LaTeX Warning: Reference `fig:Integration of Raw Data' on page 45 undefined on 
+input line 258.
+
+
+LaTeX Warning: Reference `ch:Data Analysis' on page 45 undefined on input line 
+259.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 279--284
 
  []
@@ -2212,14 +2317,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 286--288
 
  []
 
-<images/NoMovingFiltered.png, id=699, 2392.43813pt x 1304.62407pt>
+<images/NoMovingFiltered.png, id=596, 2392.43813pt x 1304.62407pt>
 File: images/NoMovingFiltered.png Graphic file (type png)
 
 <use images/NoMovingFiltered.png>
 Package pdftex.def Info: images/NoMovingFiltered.png used on input line 295.
 (pdftex.def)             Requested size: 239.25783pt x 130.47005pt.
 
-<images/MovingFiltered.png, id=700, 2382.65157pt x 1300.86pt>
+<images/MovingFiltered.png, id=597, 2382.65157pt x 1300.86pt>
 File: images/MovingFiltered.png Graphic file (type png)
 
 <use images/MovingFiltered.png>
@@ -2230,7 +2335,7 @@ Overfull \hbox (22.29283pt too wide) in paragraph at lines 295--297
 [][][][] 
  []
 
-<images/TotalFiltered.png, id=701, 2373.61781pt x 1290.32062pt>
+<images/TotalFiltered.png, id=598, 2373.61781pt x 1290.32062pt>
 File: images/TotalFiltered.png Graphic file (type png)
 
 <use images/TotalFiltered.png>
@@ -2257,21 +2362,21 @@ Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-<images/LWPResponse.jpg, id=711, 921.74362pt x 477.28313pt>
+<images/LWPResponse.jpg, id=609, 921.74362pt x 477.28313pt>
 File: images/LWPResponse.jpg Graphic file (type jpg)
 
 <use images/LWPResponse.jpg>
 Package pdftex.def Info: images/LWPResponse.jpg used on input line 334.
 (pdftex.def)             Requested size: 368.69092pt x 190.90987pt.
 
-<images/LWPUnfitltered.png, id=712, 2335.22438pt x 1298.60156pt>
+<images/LWPUnfitltered.png, id=610, 2335.22438pt x 1298.60156pt>
 File: images/LWPUnfitltered.png Graphic file (type png)
 
 <use images/LWPUnfitltered.png>
 Package pdftex.def Info: images/LWPUnfitltered.png used on input line 336.
 (pdftex.def)             Requested size: 373.64354pt x 207.78049pt.
 
-<images/LWPFiltered.png, id=713, 2348.02219pt x 1306.8825pt>
+<images/LWPFiltered.png, id=611, 2348.02219pt x 1306.8825pt>
 File: images/LWPFiltered.png Graphic file (type png)
 
 <use images/LWPFiltered.png>
@@ -2319,28 +2424,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50] <images/HPFResponse.png, id=731, 917.22675pt x 481.8pt>
+[50] <images/HPFResponse.png, id=630, 917.22675pt x 481.8pt>
 File: images/HPFResponse.png Graphic file (type png)
 
 <use images/HPFResponse.png>
 Package pdftex.def Info: images/HPFResponse.png used on input line 359.
 (pdftex.def)             Requested size: 265.98894pt x 139.71841pt.
 
-<images/HPFUnfiltered.png, id=732, 2366.08969pt x 1283.54532pt>
+<images/HPFUnfiltered.png, id=631, 2366.08969pt x 1283.54532pt>
 File: images/HPFUnfiltered.png Graphic file (type png)
 
 <use images/HPFUnfiltered.png>
 Package pdftex.def Info: images/HPFUnfiltered.png used on input line 361.
 (pdftex.def)             Requested size: 260.27068pt x 141.19041pt.
 
-<images/HPFFiltered.png, id=733, 2390.9325pt x 1292.57906pt>
+<images/HPFFiltered.png, id=632, 2390.9325pt x 1292.57906pt>
 File: images/HPFFiltered.png Graphic file (type png)
 
 <use images/HPFFiltered.png>
 Package pdftex.def Info: images/HPFFiltered.png used on input line 363.
 (pdftex.def)             Requested size: 263.00339pt x 142.18413pt.
 
-<images/HPFOverlapped.png, id=734, 2377.38188pt x 1277.52281pt>
+<images/HPFOverlapped.png, id=633, 2377.38188pt x 1277.52281pt>
 File: images/HPFOverlapped.png Graphic file (type png)
 
 <use images/HPFOverlapped.png>
@@ -2368,7 +2473,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [51 <./images/HPFResponse.png> <./images/HPFUnfiltered.png> <./images/HPFFilter
 ed.png> <./images/HPFOverlapped.png>]
-<images/BPFResponse.png, id=745, 927.16388pt x 471.86287pt>
+<images/BPFResponse.png, id=645, 927.16388pt x 471.86287pt>
 File: images/BPFResponse.png Graphic file (type png)
 
 <use images/BPFResponse.png>
@@ -2386,6 +2491,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [52 <./images/BPFResponse.png>]
+
+LaTeX Warning: Reference `eq:dft' on page 53 undefined on input line 403.
+
 Missing character: There is no â in font cmr10!
 Missing character: There is no ˆ in font cmr10!
 Missing character: There is no ’ in font cmr10!
@@ -2404,7 +2512,7 @@ File: images/LWPUnfitltered.png Graphic file (type png)
 Package pdftex.def Info: images/LWPUnfitltered.png used on input line 408.
 (pdftex.def)             Requested size: 373.64354pt x 207.78049pt.
 
-<images/fft.png, id=753, 2380.39313pt x 1308.38812pt>
+<images/fft.png, id=653, 2380.39313pt x 1308.38812pt>
 File: images/fft.png Graphic file (type png)
  <use images/fft.png>
 Package pdftex.def Info: images/fft.png used on input line 415.
@@ -2417,13 +2525,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [53]
+
+LaTeX Warning: Reference `ssc:Low Pass Filter' on page 54 undefined on input li
+ne 419.
+
+
+LaTeX Warning: Reference `ssc:High Pass Filter' on page 54 undefined on input l
+ine 419.
+
+
 Overfull \hbox (2.41821pt too wide) in paragraph at lines 419--420
 \OT1/cmr/m/n/10.95 It is pos-si-ble see that there is a peak around $10 \OML/cm
 m/m/it/10.95 Hz$\OT1/cmr/m/n/10.95 . This fre-quency can be used like cut-of-fr
 e-quency
  []
 
-<images/Problem.jpg, id=762, 853.5087pt x 853.5087pt>
+<images/Problem.jpg, id=660, 853.5087pt x 853.5087pt>
 File: images/Problem.jpg Graphic file (type jpg)
  <use images/Problem.jpg>
 Package pdftex.def Info: images/Problem.jpg used on input line 439.
@@ -2469,7 +2586,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56] <images/ProblemSolved.jpg, id=778, 853.5087pt x 853.5087pt>
+[56] <images/ProblemSolved.jpg, id=678, 853.5087pt x 853.5087pt>
 File: images/ProblemSolved.jpg Graphic file (type jpg)
 
 <use images/ProblemSolved.jpg>
@@ -2479,6 +2596,10 @@ Package pdftex.def Info: images/ProblemSolved.jpg used on input line 495.
 Overfull \hbox (14.18713pt too wide) in paragraph at lines 495--496
  [][] 
  []
+
+
+LaTeX Warning: Reference `alg:Redefine Latitude And Longitude' on page 57 undef
+ined on input line 502.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2511,7 +2632,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58] <images/Haversine.png, id=789, 508.60013pt x 326.11838pt>
+[58] <images/Haversine.png, id=689, 508.60013pt x 326.11838pt>
 File: images/Haversine.png Graphic file (type png)
 
 <use images/Haversine.png>
@@ -2528,34 +2649,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Chapter 5.
-<images/WorkFlow.png, id=799, 824.96205pt x 552.50415pt>
+[61] <images/WorkFlow.png, id=704, 824.96205pt x 552.50415pt>
 File: images/WorkFlow.png Graphic file (type png)
 
 <use images/WorkFlow.png>
-Package pdftex.def Info: images/WorkFlow.png used on input line 24.
+Package pdftex.def Info: images/WorkFlow.png used on input line 25.
 (pdftex.def)             Requested size: 494.98105pt x 331.50504pt.
 
-Overfull \hbox (39.73694pt too wide) in paragraph at lines 24--25
+Overfull \hbox (39.73694pt too wide) in paragraph at lines 25--26
  [][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [61]
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ° in font cmr10!
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ° in font cmr10!
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[62 <./images/WorkFlow.png>]
-Overfull \hbox (14.29741pt too wide) in paragraph at lines 80--81
+[62
+
+ <./images/WorkFlow.png>]
+Overfull \hbox (14.29741pt too wide) in paragraph at lines 81--82
 \OT1/cmr/m/n/10.95 These will be pro-cessed with MAT-LAB (Ma-trix Lab-o-ra-tory
 ) a multi-paradigm nu-mer-i-cal com-put-ing
  []
@@ -2567,31 +2685,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [63]
-Underfull \hbox (badness 10000) in paragraph at lines 99--103
+Underfull \hbox (badness 10000) in paragraph at lines 100--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--103
+Underfull \hbox (badness 10000) in paragraph at lines 100--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--103
+Underfull \hbox (badness 10000) in paragraph at lines 100--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--103
+Underfull \hbox (badness 10000) in paragraph at lines 100--104
 
  []
 
-<images/SPARaw.png, id=814, 2354.0447pt x 1309.14093pt>
+<images/SPARaw.png, id=716, 2369.85374pt x 1317.42188pt>
 File: images/SPARaw.png Graphic file (type png)
 
 <use images/SPARaw.png>
-Package pdftex.def Info: images/SPARaw.png used on input line 108.
-(pdftex.def)             Requested size: 235.41826pt x 130.92175pt.
+Package pdftex.def Info: images/SPARaw.png used on input line 109.
+(pdftex.def)             Requested size: 379.18434pt x 210.79181pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2599,31 +2717,52 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[64] <images/SPANoVelocity.png, id=828, 2334.47156pt x 1301.61281pt>
-File: images/SPANoVelocity.png Graphic file (type png)
+[64]
 
-<use images/SPANoVelocity.png>
-Package pdftex.def Info: images/SPANoVelocity.png used on input line 119.
-(pdftex.def)             Requested size: 233.46083pt x 130.1689pt.
+LaTeX Warning: Reference `ch:Data Analysis' on page 65 undefined on input line 
+116.
 
-<images/SPANoEngine.png, id=832, 2345.76375pt x 1291.07344pt>
+
+LaTeX Warning: Reference `sc:Accelerometer Reorientation' on page 65 undefined 
+on input line 116.
+
+
+LaTeX Warning: Reference `sc:Accelerometer Reorientation' on page 65 undefined 
+on input line 116.
+
+
+LaTeX Warning: Reference `ch:Data Analysis' on page 65 undefined on input line 
+117.
+
+
+LaTeX Warning: Reference `sc:GPS points division' on page 65 undefined on input
+ line 117.
+
+
+LaTeX Warning: Reference `sc:GPS points division' on page 65 undefined on input
+ line 117.
+
+
+LaTeX Warning: Reference `ch:Data Analysis' on page 65 undefined on input line 
+118.
+
+
+LaTeX Warning: Reference `sc:Data Filtering' on page 65 undefined on input line
+ 118.
+
+
+LaTeX Warning: Reference `sssc:Remove Engine Vibrations Filter' on page 65 unde
+fined on input line 118.
+
+<images/SPANoEngine.png, id=721, 2352.53906pt x 1321.18594pt>
 File: images/SPANoEngine.png Graphic file (type png)
 
 <use images/SPANoEngine.png>
-Package pdftex.def Info: images/SPANoEngine.png used on input line 125.
-(pdftex.def)             Requested size: 234.59012pt x 129.1149pt.
+Package pdftex.def Info: images/SPANoEngine.png used on input line 122.
+(pdftex.def)             Requested size: 376.41394pt x 211.39407pt.
 
-Overfull \hbox (3.9265pt too wide) in paragraph at lines 121--126
-\OT1/cmr/m/n/10.95 the noise com-po-nents gen-er-ated by the en-gine will be sm
-oothed, ac-cord-ing to the ap-pli-ca-tion
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<images/SPAFinal.png, id=835, 2364.58406pt x 1318.9275pt>
-File: images/SPAFinal.png Graphic file (type png)
-
-<use images/SPAFinal.png>
-Package pdftex.def Info: images/SPAFinal.png used on input line 132.
-(pdftex.def)             Requested size: 236.47226pt x 131.90047pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2631,8 +2770,194 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65 <./images/SPARaw.png> <./images/SPANoVelocity.png> <./images/SPANoEngine.pn
-g>]) [66 <./images/SPAFinal.png>]
+[65 <./images/SPARaw.png>]
+
+LaTeX Warning: Reference `ch:Data Analysis' on page 66 undefined on input line 
+125.
+
+
+LaTeX Warning: Reference `sc:Data Filtering' on page 66 undefined on input line
+ 125.
+
+
+LaTeX Warning: Reference `sssc:Zero Velocity Filter' on page 66 undefined on in
+put line 125.
+
+<images/SPANoVelocity.png, id=727, 2393.94376pt x 1313.6578pt>
+File: images/SPANoVelocity.png Graphic file (type png)
+
+<use images/SPANoVelocity.png>
+Package pdftex.def Info: images/SPANoVelocity.png used on input line 129.
+(pdftex.def)             Requested size: 383.03883pt x 210.18954pt.
+
+
+LaTeX Warning: Reference `ssc:Haversine Formula' on page 66 undefined on input 
+line 133.
+
+
+LaTeX Warning: Reference `eq:sap' on page 66 undefined on input line 133.
+
+<images/SPAFinal.png, id=728, 2387.92125pt x 1339.25343pt>
+File: images/SPAFinal.png Graphic file (type png)
+
+<use images/SPAFinal.png>
+Package pdftex.def Info: images/SPAFinal.png used on input line 137.
+(pdftex.def)             Requested size: 382.07521pt x 214.28493pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[66 <./images/SPANoEngine.png> <./images/SPANoVelocity.png>]
+
+LaTeX Warning: Reference `ch:Introduction' on page 67 undefined on input line 1
+45.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--149
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 150.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 152.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[67 <./images/SPAFinal.png>]
+<images/CPRaw.png, id=740, 2349.52782pt x 1289.56781pt>
+File: images/CPRaw.png Graphic file (type png)
+ <use images/CPRaw.png>
+Package pdftex.def Info: images/CPRaw.png used on input line 162.
+(pdftex.def)             Requested size: 375.93213pt x 206.33507pt.
+
+
+LaTeX Warning: Reference `ch:Data Analysis' on page 68 undefined on input line 
+169.
+
+
+LaTeX Warning: Reference `sc:Accelerometer Reorientation' on page 68 undefined 
+on input line 169.
+
+
+LaTeX Warning: Reference `sc:Accelerometer Reorientation' on page 68 undefined 
+on input line 169.
+
+
+LaTeX Warning: Reference `ch:Data Analysis' on page 68 undefined on input line 
+170.
+
+
+LaTeX Warning: Reference `sc:GPS points division' on page 68 undefined on input
+ line 170.
+
+
+LaTeX Warning: Reference `sc:GPS points division' on page 68 undefined on input
+ line 170.
+
+
+LaTeX Warning: Reference `ch:Data Analysis' on page 68 undefined on input line 
+171.
+
+
+LaTeX Warning: Reference `sc:Data Filtering' on page 68 undefined on input line
+ 171.
+
+
+LaTeX Warning: Reference `sssc:Remove Engine Vibrations Filter' on page 68 unde
+fined on input line 171.
+
+<images/CPNoEngine.png, id=741, 2348.775pt x 1296.34312pt>
+File: images/CPNoEngine.png Graphic file (type png)
+
+<use images/CPNoEngine.png>
+Package pdftex.def Info: images/CPNoEngine.png used on input line 175.
+(pdftex.def)             Requested size: 375.81168pt x 207.41913pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[68 <./images/CPRaw.png>]
+
+LaTeX Warning: Reference `ch:Data Analysis' on page 69 undefined on input line 
+178.
+
+
+LaTeX Warning: Reference `sc:Data Filtering' on page 69 undefined on input line
+ 178.
+
+
+LaTeX Warning: Reference `sssc:Zero Velocity Filter' on page 69 undefined on in
+put line 178.
+
+<images/CPNoVelocity.png, id=747, 2349.52782pt x 1310.64656pt>
+File: images/CPNoVelocity.png Graphic file (type png)
+
+<use images/CPNoVelocity.png>
+Package pdftex.def Info: images/CPNoVelocity.png used on input line 182.
+(pdftex.def)             Requested size: 375.93213pt x 209.70773pt.
+
+<images/CPUnderTH.png, id=748, 2355.55031pt x 1300.86pt>
+File: images/CPUnderTH.png Graphic file (type png)
+
+<use images/CPUnderTH.png>
+Package pdftex.def Info: images/CPUnderTH.png used on input line 189.
+(pdftex.def)             Requested size: 376.89575pt x 208.14185pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[69 <./images/CPNoEngine.png> <./images/CPNoVelocity.png>]
+
+LaTeX Warning: Reference `sc:GPS points division' on page 70 undefined on input
+ line 192.
+
+
+LaTeX Warning: Reference `ssc:Haversine Formula' on page 70 undefined on input 
+line 192.
+
+
+Overfull \hbox (0.10793pt too wide) in paragraph at lines 192--193
+\OT1/cmr/m/n/10.95 Following the GPS points division([]), it may hap-pen in the
+ pre-vi-ous step, that con-sec-u-tive
+ []
+
+) [70 <./images/CPUnderTH.png>]
 Overfull \hbox (0.34462pt too wide) in paragraph at lines 115--115
 []\OT1/cmr/m/n/10.95 Christopher R Ben-nett and William DO Pa-ter-son. ``A guid
 e to cal-i-bra-tion and adap-ta-tion''.
@@ -2644,7 +2969,7 @@ Overfull \hbox (3.30833pt too wide) in paragraph at lines 115--115
 , unit quater-nions, and ro-ta-tion vec-tors''.
  []
 
-[67
+[71
 
 ]
 Overfull \hbox (4.35532pt too wide) in paragraph at lines 115--115
@@ -2677,25 +3002,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[68]
+[72]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
  (tesi.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
+Package rerunfilecheck Info: File `tesi.out' has not changed.
+(rerunfilecheck)             Checksum: 0731657B277A30E9AA971F19A14FFAF4;2232.
 
-
-Package rerunfilecheck Warning: File `tesi.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `tesi.out':
-(rerunfilecheck)             Before: 9D68773A5D5CC4AB73922FBDE01D0EEC;2162
-(rerunfilecheck)             After:  2B14C4B9107D9811A1ECEFD11E1125B4;2162.
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                tesi
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
@@ -2703,40 +3027,38 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
  ) 
 Here is how much of TeX's memory you used:
- 27515 strings out of 493323
- 516365 string characters out of 3139058
- 940050 words of memory out of 3000000
- 30459 multiletter control sequences out of 15000+200000
- 548641 words of font info for 82 fonts, out of 3000000 for 9000
+ 27543 strings out of 493323
+ 517004 string characters out of 3139058
+ 932036 words of memory out of 3000000
+ 30480 multiletter control sequences out of 15000+200000
+ 548949 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,33n,50p,10387b,1668s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{section*.40} has been referenced but does not exi
-st, replaced by a fixed one
-
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/eurosym/feymr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
-/ncntrsbk/uncb8a.pfb>
-Output written on tesi.pdf (78 pages, 18275286 bytes).
+ 45i,33n,50p,10387b,1669s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/eurosym/feymr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ncntrs
+bk/uncb8a.pfb>
+Output written on tesi.pdf (82 pages, 19106232 bytes).
 PDF statistics:
- 989 PDF objects out of 1000 (max. 8388607)
- 248 named destinations out of 1000 (max. 500000)
- 500 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 906 PDF objects out of 1000 (max. 8388607)
+ 256 named destinations out of 1000 (max. 500000)
+ 528 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -49,4 +49,5 @@
 \contentsline {section}{\numberline {5.1}Data Collect}{62}{section.5.1}
 \contentsline {section}{\numberline {5.2}Data Processing}{63}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Simple Acceleration Points}{64}{subsection.5.2.1}
-\contentsline {section}{\textbf {Acknowledgments}}{66}{section*.44}
+\contentsline {subsection}{\numberline {5.2.2}Critical Points}{67}{subsection.5.2.2}
+\contentsline {section}{\textbf {Acknowledgments}}{70}{section*.48}
