@@ -1,61 +1,76 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Examples of Walking Profiler (left) and Disptick Profiler (right).\relax }}{6}{figure.caption.9}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Examples of contact less profilometers mounted on vehicle.\relax }}{7}{figure.caption.10}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Examples of Walking Profiler (left) and Dipstick Profiler (right).\relax }}{6}{figure.caption.10}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Examples of contactless profilometers mounted on the vehicle.\relax }}{6}{figure.caption.12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces International Roughness Index Scale defined by Sayers and Karamihas \cite {little_book} Representing the characteristic of road roughness in function of IRI.\relax }}{12}{figure.caption.11}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Information Quality Level Conception\relax }}{15}{figure.caption.12}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Quarter Car Model and Frequency Response\relax }}{18}{figure.caption.14}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces International Roughness Index Scale defined by Sayers and Karamihas \cite {little_book} Representing the characteristic of road roughness in function of IRI.\relax }}{10}{figure.caption.13}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Information Quality Level Conception\relax }}{13}{figure.caption.14}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Quarter Car Model and Frequency Response\relax }}{16}{figure.caption.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Examples of IMU box.\relax }}{22}{figure.caption.16}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Frame of car respect Yaw, Pitch, and Roll Angle.\relax }}{23}{figure.caption.17}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Sample view of the principals sensors inside smartphone\relax }}{27}{figure.caption.18}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Internal structure of smartphone accelerometer sensor\relax }}{28}{figure.caption.19}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Internal structure of smartphone gyroscopes sensor\relax }}{29}{figure.caption.20}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Triangulation technique\relax }}{31}{figure.caption.21}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of Racelogic IMU Box\relax }}{20}{figure.caption.18}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Frame of car respect Yaw, Pitch, and Roll Angle.\relax }}{21}{figure.caption.19}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Sample view of the principals sensors inside smartphone\relax }}{24}{figure.caption.20}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Internal structure of smartphone accelerometer sensor\relax }}{25}{figure.caption.22}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Internal structure of smartphone gyroscopes sensor\relax }}{26}{figure.caption.24}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Triangulation technique\relax }}{27}{figure.caption.26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Integration using Rectangular (left) and Trapezoidal (right) methods of Sine Wave.\relax }}{37}{figure.caption.24}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces The result of double integration of a Raw Signal\relax }}{38}{figure.caption.25}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acceleration}}}{38}{subfigure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Velocity}}}{38}{subfigure.2.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Displacement}}}{38}{subfigure.2.3}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Correct alignment of smartphone respect to the vehicle cartesian frame.\relax }}{39}{figure.caption.26}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces The result of reorientation of raw data\relax }}{40}{figure.caption.27}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Raw}}}{40}{subfigure.4.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Reoriented}}}{40}{subfigure.4.2}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Application of Engine Vibrations Filter\relax }}{42}{figure.caption.28}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acceleration}}}{42}{subfigure.5.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Without Engine Vibrations}}}{42}{subfigure.5.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Overlapping}}}{42}{subfigure.5.3}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Application of Zero Velocity Filter\relax }}{44}{figure.caption.29}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acceleration}}}{44}{subfigure.6.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {No Zero Velocity}}}{44}{subfigure.6.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Overlapping}}}{44}{subfigure.6.3}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Application of Moving Average Filter\relax }}{47}{figure.caption.30}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Unfiltered}}}{47}{subfigure.7.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Filtered}}}{47}{subfigure.7.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Overlapping}}}{47}{subfigure.7.3}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Example of Low Pass Filter\relax }}{49}{figure.caption.31}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Filter Response}}}{49}{subfigure.8.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Unfiltered}}}{49}{subfigure.8.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Filtered}}}{49}{subfigure.8.3}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Example of Application of High Pass Filter\relax }}{51}{figure.caption.32}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Filter Response}}}{51}{subfigure.9.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Unfiltered}}}{51}{subfigure.9.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Filtered}}}{51}{subfigure.9.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Overlapped}}}{51}{subfigure.9.4}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Band Pass Filter Response\relax }}{52}{figure.caption.33}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Fast Fourier Transform\relax }}{54}{figure.caption.35}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Start and End points\relax }}{55}{figure.caption.36}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Start and End points\relax }}{57}{figure.caption.37}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Haversine Example\relax }}{59}{figure.caption.38}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Integration using Rectangular (left) and Trapezoidal (right) methods of Sine Wave.\relax }}{32}{figure.caption.30}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The result of double integration of a Raw Signal\relax }}{34}{figure.caption.31}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acceleration}}}{34}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Velocity}}}{34}{subfigure.2.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Displacement}}}{34}{subfigure.2.3}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Correct alignment of smartphone respect to the vehicle cartesian frame.\relax }}{35}{figure.caption.32}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The result of reorientation of raw data\relax }}{36}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Raw}}}{36}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Reoriented}}}{36}{subfigure.4.2}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Application of Filtering Engine Vibrations\relax }}{38}{figure.caption.35}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acceleration}}}{38}{subfigure.5.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Acceleration after filtering}}}{38}{subfigure.5.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Signal Overlapping}}}{38}{subfigure.5.3}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Application of Zero Velocity Filter\relax }}{40}{figure.caption.37}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acceleration}}}{40}{subfigure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {No Zero Velocity}}}{40}{subfigure.6.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Overlapping}}}{40}{subfigure.6.3}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Application of Moving Average Filter\relax }}{42}{figure.caption.40}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Unfiltered Signal}}}{42}{subfigure.7.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Filtered Signal}}}{42}{subfigure.7.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Signal Overlapping}}}{42}{subfigure.7.3}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Example of Low Pass Filter\relax }}{44}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Filter Response}}}{44}{subfigure.8.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Unfiltered}}}{44}{subfigure.8.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Filtered}}}{44}{subfigure.8.3}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Example of Application of High Pass Filter\relax }}{46}{figure.caption.45}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Filter Response}}}{46}{subfigure.9.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Unfiltered Signal}}}{46}{subfigure.9.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Filtered Signal}}}{46}{subfigure.9.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Signal Overlapping}}}{46}{subfigure.9.4}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Band Pass Filter Response\relax }}{47}{figure.caption.47}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Fast Fourier Transform\relax }}{49}{figure.caption.49}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Start and End points\relax }}{50}{figure.caption.50}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Start and End points\relax }}{52}{figure.caption.51}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Haversine Example\relax }}{54}{figure.caption.52}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces System Structure\relax }}{62}{figure.caption.39}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Raw Accelerometer Signal\relax }}{65}{figure.caption.40}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Signal after application of the filter\relax }}{66}{figure.caption.41}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Signal after application of the filter\relax }}{66}{figure.caption.42}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Final Result\relax }}{67}{figure.caption.43}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Original Signal\relax }}{68}{figure.caption.44}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Signal Without Engine Vibrations\relax }}{69}{figure.caption.45}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Null Velocity Removed\relax }}{69}{figure.caption.46}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Results Final\relax }}{70}{figure.caption.47}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces System Structure\relax }}{56}{figure.caption.53}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Raw Accelerometer Signal\relax }}{59}{figure.caption.54}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Signal after application of the filter\relax }}{60}{figure.caption.55}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Signal after application of the filter\relax }}{60}{figure.caption.56}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Final Result\relax }}{61}{figure.caption.57}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Original Signal\relax }}{62}{figure.caption.58}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Signal Without Engine Vibrations\relax }}{63}{figure.caption.59}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Null Velocity Removed\relax }}{63}{figure.caption.60}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Results Final\relax }}{64}{figure.caption.61}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Raw Acceleration Signal\relax }}{65}{figure.caption.63}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Application of a FIR moving average filter on signal\relax }}{66}{figure.caption.64}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Acceleration Signal after the filters application\relax }}{67}{figure.caption.65}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Original Signal compared with the filter Signal\relax }}{67}{figure.caption.66}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Original Signal (blue) compared with the filter Signal (orange) relative to a little set of data\relax }}{68}{figure.caption.67}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Velocity obtained after integration and filtering\relax }}{69}{figure.caption.68}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Displacement obtained after velocity integration\relax }}{69}{figure.caption.69}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Final displacement after grouping points\relax }}{70}{figure.caption.70}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces IRI computation result\relax }}{71}{figure.caption.72}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Web Site main page\relax }}{72}{figure.caption.74}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Point Clustering based on Zoom Level\relax }}{73}{figure.caption.75}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Min Zoom Level}}}{73}{subfigure.20.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Max Zoom Level}}}{73}{subfigure.20.2}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Example of PopUp\relax }}{74}{figure.caption.76}
+\addvspace {10\p@ }

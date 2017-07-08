@@ -13,11 +13,11 @@
 \BOOKMARK [1][-]{section.2.4}{Calculation of IRI}{chapter.2}% 13
 \BOOKMARK [0][-]{chapter.3}{Inertial Measurement Unit}{}% 14
 \BOOKMARK [1][-]{section.3.1}{Operational Principles}{chapter.3}% 15
-\BOOKMARK [2][-]{subsection.3.1.1}{Uses}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.1}{Applications}{section.3.1}% 16
 \BOOKMARK [1][-]{section.3.2}{Inertial Navigation System}{chapter.3}% 17
 \BOOKMARK [2][-]{subsection.3.2.1}{Principal Sensors}{section.3.2}% 18
 \BOOKMARK [1][-]{section.3.3}{Smartphone Sensors}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.4}{Error}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.4}{Accuracy}{chapter.3}% 20
 \BOOKMARK [0][-]{chapter.4}{Data Analysis}{}% 21
 \BOOKMARK [1][-]{section.4.1}{Accelerometer Reorientation}{chapter.4}% 22
 \BOOKMARK [1][-]{section.4.2}{Data Filtering}{chapter.4}% 23
@@ -31,4 +31,10 @@
 \BOOKMARK [1][-]{section.5.2}{Data Processing}{chapter.5}% 31
 \BOOKMARK [2][-]{subsection.5.2.1}{Simple Acceleration Points}{section.5.2}% 32
 \BOOKMARK [2][-]{subsection.5.2.2}{Critical Points}{section.5.2}% 33
-\BOOKMARK [1][-]{section*.48}{Acknowledgments}{chapter.5}% 34
+\BOOKMARK [2][-]{subsection.5.2.3}{IRI}{section.5.2}% 34
+\BOOKMARK [1][-]{section.5.3}{Data Storing}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.4}{Viewing on interactive map}{chapter.5}% 36
+\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 37
+\BOOKMARK [1][-]{section.6.1}{Conclusions}{chapter.6}% 38
+\BOOKMARK [1][-]{section.6.2}{Future Work}{chapter.6}% 39
+\BOOKMARK [1][-]{section*.77}{Acknowledgments}{chapter.6}% 40

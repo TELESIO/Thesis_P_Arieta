@@ -9,24 +9,24 @@
 \begin{document}
 \chapter{Data Analysis}
 \label{ch:Data Analysis}
-As discussed in Chapter\ref{ch:Inertial Measurement Unit} in the Error section(\ref{sc:Error} on page \pageref{sc:Error}). IMU, during measurement suffer from accumulated error.\\
-The measurement along the pathway of road surface consists of a sampling of measurements at specific time intervals (usually in the order of milliseconds).So the road profile can be seen as an electronically acquired digital signal and consequently it is necessary clean up the signal from the noise\footnote{An unknown modifications that a signal may suffer during capture}, it may also be useful to delete certain information in the signal that is not of interest, or correct it from the drift(\ref{sc:Error}).\\
+As discussed in Chapter\ref{ch:Inertial Measurement Unit} in the Error section(\ref{sc:Error} on page \pageref{sc:Error}). IMU, during measurement, suffer from accumulated error. 
+The measurement along the pathway of road surface consists of a sampling of measurements at specific time intervals (usually in the order of milliseconds). So the road profile can be seen as an electronically acquired digital signal and consequently, it is necessary to filtering the signal from the noise\footnote{An unknown modifications that a signal may suffer during capture}, it may also be useful to delete certain information in the signal that is not of interest, or correct it from the drift(\ref{sc:Error}).\\
 
-
-\noindent This cleaning procedure, also called filtering,it is used in the theory of signal analysis.
-It is an essential aspect in the evaluation of the profile, \cite{little_book}. In brief, a digital filter represents a procedure that transforms a series of numbers into a new series of numbers, \cite{little_book}.\\
+\noindent This procedure, called filtering, it is used in the theory of signal analysis.
+It is an essential aspect in the evaluation of the profile\cite{little_book}. In brief, a digital filter represents a procedure that transforms a series of numbers into a new series of numbers\cite{little_book}.
 From the measurement obtained by the sensors, particular attention is given to the vertical acceleration signal and to the rotation vectors. \\
-The rotation vectors will be useful for reorienting the signals obtained from the smartphone\cite{Andro} respect to the vehicle axes, while the vertical acceleration signal will be subject to various filtering operations depending on the final index to be obtained.\\\\
-First of all, it is necessary to pay some attention to some dynamics\footnote{branch of mechanics that deals with the study of the motion of bodies and their causes or, more concretely, of the circumstances that determine and modify it} physical principles , about the operations that can be done, on the acceleration signal to get the position and vice-versa.\\\\
+
+\noindent The rotation vectors will be useful for reorienting the signals obtained from the smartphone\cite{Andro} respect to the vehicle axes, while the vertical acceleration signal will be subject to various filtering operations depending on the final index to be obtained.\\\\
+First of all, it is necessary to pay some attention to some dynamics\footnote{Branch of mechanics that deals with the study of the motion of bodies and their causes or, more concretely, of the circumstances that determine and modify it} physical principles, about the operations that can be done, on the acceleration signal to get the position and vice-versa.\\\\
 Given a position versus time of an object, $x(t)$, the velocity, $v(t)$, can be found by taking the first derivative.\\
-\begin{center}
-{\large $v(t) = \dfrac{dx}{dt}$}
-\end{center}
+\begin{equation}
+v(t) = \dfrac{dx}{dt}
+\end{equation}\label{eq:velocity}
 Acceleration, $a(t)$, can be found by taking the second derivative of position or first
 derivative of velocity.
-\begin{center}
-{\large $a(t) = \dfrac{d^{2}x}{dt^{2}} = \dfrac{dv}{dt}$}
-\end{center}
+\begin{equation}
+a(t) = \dfrac{d^{2}x}{dt^{2}} = \dfrac{dv}{dt}
+\end{equation}\label{eq:displacement}
 However, is interesting to reverse this process and find the position signal given an acceleration signal. To do that, a double integration must be performed on the acceleration signal.
 In principle, using double integration on an acceleration signal to get a position signal, the initial position and initial velocity must be known. After the first integration, the initial velocity should be added to the result, as the initial position should be added after the second integration. These operations are illustrated in the following equations
 \begin{center}
@@ -48,7 +48,7 @@ Where: \\
 \end{table}
 \end{center}
 
-\noindent To get the position signal from velocity, is used the followed formula:
+\noindent To get the position signal from velocity is used the followed formula:
 \begin{center}
 \begin{equation}
  {\large x(t) = x(t_{0}) + \int_{t_{0}}^{t} \! v(\tau) \, \mathrm{d}\tau.}
@@ -74,21 +74,21 @@ impractical or unobtainable. By  data filtering, it is developed an approach tha
 To perform a numerical integration it is necessary to choose one integration algorithm of the many existing. 
 The acceleration signal is sampled, making it a discrete function of time having a sampling frequency, $f_{s}$, associated with it. The easiest way to perform numerical integration is to use the rectangular integration method. This method uses an accumulator to sum all past sampled inputs and the current input sample and divide by the sampling rate. Rectangular integration is represented by the following difference equation:
 
-\begin{center}
-$y(n) = \dfrac{1}{f_{s}} \sum_{k=0}^{n} x(n-k) = y(n-1) + \dfrac{1}{f_{s}} x(n)$
-\end{center}
+\begin{equation} 
+y(n) = \dfrac{1}{f_{s}} \sum_{k=0}^{n} x(n-k) = y(n-1) + \dfrac{1}{f_{s}} x(n)
+\end{equation}\label{eq:rectangular}
+
 
 \noindent Another numerical integration method uses the trapezoidal rule. 
 The results are more precise with this method than the rectangular method. The difference equation for trapezoidal integration is:
 
-\begin{center}
-$y(n) = y(n-1) + \dfrac{1}{2 f_{s}}[x(n-1) + x(n)], n > 0$
-\end{center}
+\begin{equation}
+y(n) = y(n-1) + \dfrac{1}{2 f_{s}}[x(n-1) + x(n)], n > 0
+\end{equation}\label{eq:trapezoidal}
 
 The figure below show the difference using both methods.
 
-\vspace{0.35cm}
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.55]{RectangularInte}
 \hspace{0.5cm}
@@ -97,14 +97,14 @@ The figure below show the difference using both methods.
 \label{fig:Rectangular and Trapezoidal Integration}
 \end{figure}
 
-\noindent The integration was carried out using the trapezoidal method by the MATLAB suite. But without adequate cleaning of the signal, the result presents very error, caused by the drift and noise. \\
-Various signal cleanup procedures will be discussed. The figure below shows the result of a raw signal integration using trapezoidal method.
+\noindent The integration was carried out using the trapezoidal method by the MATLAB suite. But without adequate filtering of the signal, the result presents a very error, caused by the drift and noise. \\\\
+Various signal filtering procedures will be discussed. The figure below shows the result of a raw signal integration using the  trapezoidal method.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \subfloat[Acceleration]{\includegraphics[scale=0.11]{RawAccelerometer}\label{fig:Raw Accelerometer}}  
   
-  \subfloat[Velocity]{\includegraphics[scale=0.11]{VelocityIntegration}\label{fig:Velocity}}
+  \subfloat[Velocity]{\includegraphics[scale=0.11]{velocityIntegration}\label{fig:Velocity}}
 
   \subfloat[Displacement]{\includegraphics[scale=0.11]{DisplacementIntegration}\label{fig:Displacement}}  
   \caption{The result of double integration of a Raw Signal}
@@ -112,25 +112,25 @@ Various signal cleanup procedures will be discussed. The figure below shows the 
 \end{figure}
 \clearpage
 
-\noindent As is possible see, the result is not realistic, considering it is vertical acceleration, so it is necessary to perform various steps to fix and clean the signal. First of all, the signal reorientation will be carried out respect the axes of the vehicle, and subsequently, various filter operations to clean the signal.
+\noindent As is possible see, the result is not realistic, considering it is vertical acceleration, so it is necessary to perform various steps to filter the signal. First of all, the signal reorientation will be carried out respect the axes of the vehicle, and subsequently, various filter operations to smooth the signal.
 
 \section{Accelerometer Reorientation} \label{sc:Accelerometer Reorientation}
 \noindent The Cartesian reference system of the phone must be aligned with the vehicle reference system, to detect the vehicle motion correctly.
 As shown in the figure below.
 
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.7]{phonecarorientation}  
   \caption{Correct alignment of smartphone respect to the vehicle cartesian frame.}
   \label{fig:Smartphone cartesian frame alignment respect Car axis.}
 \end{figure}
-\noindent Smartphone accelerometer detects the following accelerations: $a_{x_{p}}$ , $a_{y_{p}}$ and $a_{z_{p}}$ . To determine the accelerations felt by the vehicle and locate road surface anomalies. The accelerometer must detect what happens in the direction perpendicular ($Z$ axes) to the vehicle \cite{mohan2008nericell}.
-Respectively the $X_{p}$ axis identifies the longitudinal direction, $Y_{p}$ axis the transverse direction and $Z_{p}$ the perpendicular direction respect to the $xy$ plane.
+\noindent Smartphone accelerometer detects the following accelerations: $a_{x_{p}}$ , $a_{y_{p}}$ and $a_{z_{p}}$ . To determine the accelerations felt by the vehicle and locate road surface anomalies. The accelerometer must detect what happens in the direction perpendicular ($Z$ axes) to the vehicle\cite{mohan2008nericell}.
+Respectively the $X_{p}$ axis identifies the longitudinal direction, $Y_{p}$ axis the transverse direction and $Z_{p}$ the perpendicular direction respect to the $xy$ plane.\\
 
-\noindent To detect road anomalies, the direction of the z-axis must correspond to the direction of the z axis. If this condition subsists, the accelerometer is well oriented, contrarily it is not well oriented and needs to be reoriented. But even if starting from a precise orientation condition, during travel the phone may be moving, or due to unexpected vehicle movements, travel of climbing, downhill, curve, all of these causes could affect the misalignment of the smartphone frame respect to the vehicle frame.
+\noindent To detect road anomalies, the direction of the z-axis must correspond to the direction of the z-axes. If this condition subsists, the accelerometer is well oriented, contrarily it is not well oriented and needs to be reoriented. But even if starting from a precise orientation condition, during travel the phone may be moving, or due to unexpected vehicle movements, travel of climbing, downhill, curve, all of these causes could affect the misalignment of the smartphone frame respect to the vehicle frame.\\
 
-\noindent The reorientation can be performed by the Euler Angles. Three angles that allow to defining the orientation in space of any body through a succession of elementary rotations.\cite{diebel2006representing}
-The $XYZ$ sequence was defined,a rotation around the $x$ axis by an angle $\alpha$ (roll angle), one around the $y$ axis by $\beta$ (pitch angle) and one around the $z$ axis by  $\gamma$ (yaw angle).\\\\
+\noindent The reorientation can be performed by the Euler Angles. Three angles that allow to defining the orientation in space of any body through a succession of elementary rotations\cite{diebel2006representing}.
+The $XYZ$ sequence was defined, a rotation around the $x$-axis by an angle $\alpha$ (roll angle), one around the $y$-axis by $\beta$ (pitch angle) and one around the $z$-axis by  $\gamma$ (yaw angle).\\
 \noindent The equations that allows to reoriented data by the $\alpha$, $\beta$, $\gamma$, angle are:\cite{Andro}
 \begin{equation}
 a_{x_{reor}} = \cos (\beta) a_{x_{p}} + \sin (\beta) \sin (\alpha) a_{y_{p}} + \cos (\alpha) \sin (\beta) a_{z_{p}} 
@@ -144,7 +144,7 @@ a_{z_{reor}} = -\sin (\beta) a_{x_{p}} + \cos (\beta) \sin (\alpha) a_{y_{p}} + 
 
 
 \noindent The figure below, show an example of reoriented data.
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
   \subfloat[Raw]{\includegraphics[scale=0.11]{raw}\label{fig:Raw Accelerometers}}  
   
@@ -156,7 +156,7 @@ a_{z_{reor}} = -\sin (\beta) a_{x_{p}} + \cos (\beta) \sin (\alpha) a_{y_{p}} + 
 \end{figure}
 
 \section{Data Filtering} \label{sc:Data Filtering}
-As can be seen in the figure \ref{fig:Integration of Raw Data}, a data filtering operation is needed to clear the signal and perform better integration.
+As can be seen in figure \ref{fig:Integration of Raw Data}, a data filtering operation is needed to smooth the signal and perform a better integration.
 It is necessary to apply:
 
 \begin{itemize}
@@ -167,8 +167,7 @@ It is necessary to apply:
 
 
 \subsection{Preliminary Filtering}\label{ssc:Preliminary Filtering}
-During signal capture, it is important to consider some information that can be removed, since they are not relevant to the final calculation.\\
-These principally regard:
+During signal capture, it is important to consider some information that can be removed, since they are not relevant to the final calculation. These principal regard:
 \begin{itemize}
 \item The background noise generated by engine vibrations.
 \item Acceleration components recorded at the moment the vehicle is stationary, so when its velocity is equal to $0$ $\si{\km\per\hour}$.
@@ -176,9 +175,9 @@ These principally regard:
 
 \noindent These two filters are applied to all three indexes (IRI, Critical Points, Simple Acceleration Points) that are extrapolated from the data series.
 
-\subsubsection{Remove Engine Vibrations Filter} \label{sssc:Remove Engine Vibrations Filter}
-Considering the vehicle in a stationary position, both flat, uphill and downhill, with no any external form of acceleration given by the pilot, so at no speed. Many measurements have been made to see how much the engine vibration affects the process of data acquisition.\\\\
-Analyzing these measurements, two thresholds, one minimum and one maximum were identified, called respectively \textbf{$a_{min_{th}}$} and \textbf{$a_{max_{th}}$}.\\\\
+\subsubsection{Filtering Engine Vibrations} \label{sssc:Remove Engine Vibrations Filter}
+Considering the vehicle in a stationary position, both flat, uphill and downhill, with no any external form of acceleration given by the pilot, so at no speed. Many measurements have been made to see how much the engine vibration affects the process of data acquisition.\\
+Analyzing these measurements, two thresholds, one minimum and one maximum were identified, called respectively \textbf{$a_{min_{th}}$} and \textbf{$a_{max_{th}}$}.\\
 Next, considering the generic acceleration signal at time $a_{t}$, the data series is thus modified:
 
 
@@ -202,29 +201,29 @@ $a_{t} = \sqrt{\dfrac{1}{k} (a_{t_{i}}^{2} + a_{t_{i+1}}^{2} + ... + a_{t_{i+k}}
 $if\quad  a_{min_{th}} <= a_{t} <= a_{max_{th}} $
 
 
-Where $k$ is the number of a predefined window, and all the values that falls into the window indexes will be considered.\\ 
-So the final value $a_{t}$ will be calculated as the Root Mean Square of that values.
+Where $k$ is the number of a predefined window, and all the values that fall into the window indexes will be considered.\\ 
+\noindent So the final value $a_{t}$ will be calculated as the Root Mean Square of that values.
 \end{center}
 
 \noindent The figure below shows an example of applying the filter to a series of data subject only to the reorientation operation\ref{sc:Accelerometer Reorientation}.
 
 \begin{figure}[H]	
 
-\subfloat[Acceleration]{\includegraphics[scale=0.1]{WithRumors}\label{fig:Raw Accelerometer}}    
-\subfloat[Without Engine Vibrations]{\includegraphics[scale=0.1]{NoRumors}\label{fig:Velocity}}
+\subfloat[Acceleration]{\includegraphics[scale=0.1]{WithRumors}}    
+\subfloat[Acceleration after filtering]{\includegraphics[scale=0.1]{NoRumors}}
 
 \centering
-\subfloat[Overlapping]{\includegraphics[scale=0.1]{EngineRumors}\label{fig:Sovrapposti}}
+\subfloat[Signal Overlapping]{\includegraphics[scale=0.1]{EngineRumors}}
 
 The original signal (a) is represent in blue, the filtered signal is represent in orange (b).
- \caption{Application of Engine Vibrations Filter}
+ \caption{Application of Filtering Engine Vibrations}
   \label{fig:Application of Engine Vibrations Filter.}
 \end{figure}
 
-\noindent As is possible to see the signal when filtered it is much lighter, the background noise component produced by the engine is very resonant during the acquisition process, and with this process it is possible to delete it.
+\noindent As is possible to see the signal when filtered it is much lighter, the background noise component produced by the engine is very resonant during the acquisition process and with this process it is possible to delete it.
 \clearpage
 \subsubsection{Zero Velocity Filter}\label{sssc:Zero Velocity Filter}
-This filter brings attention to the cancellation of certain acceleration values that are associated with zero speed values. Due to several factors, it may happen that while the vehicle is stationary,  because the registration starts even before the vehicle is in motion, or we are in intense traffic situations, stopped at a traffic light, and all other situations that may occur, making us stopped while the smartphone continues to read the data. If any of these conditions occur, the acceleration values can be cancelled, because they would not help us to understand the condition of the road surface.\\\\ \noindent It is possible understand that speed at a given time $(t)$ is equal to $0$ $\si{\km\per\hour}$, thanks to GPS, beacuse during smartphone recordings, gives us the speed of travel.\\\\
+This filter brings attention to the cancellation of certain acceleration values that are associated with zero speed values. Due to several factors, it may happen that while the vehicle is stationary,  because the registration starts even before the vehicle is in motion, or we are in intense traffic situations, stopped at a traffic light, and all other situations that may occur, making us stopped while the smartphone continues to read the data. If any of these conditions occur, the acceleration values can be cancelled, because they would not help us to understand the condition of the road surface.\\\\ \noindent It is possible to  understand that speed $a_{t}$ a given time $(t)$ is equal to $0$ $\si{\km\per\hour}$, thanks to GPS, because during smartphone recordings, gives us the speed of travel.\\\\
 \noindent Considering both signals at generic time $(t)$, acceleration ($a_{t}$), and velocity ($v_{t}$), the data series is so modified:
 \begin{center}
 \[
@@ -237,7 +236,7 @@ This filter brings attention to the cancellation of certain acceleration values 
 \]
 \end{center}
 
-\noindent The figure below shows an example of applying this filter to a series of data subject before to Engine Vibrations Filter\ref{sssc:Remove Engine Vibrations Filter}.
+\noindent The figure below shows an example of applying this filter to a series of data subject before to Filtering Engine Vibrations\ref{sssc:Remove Engine Vibrations Filter}.
 
 \begin{figure}[H]	
 \subfloat[Acceleration]{\includegraphics[scale=0.099]{NoRumors}} 
@@ -253,19 +252,16 @@ The original signal (a) is represent in blue, the filtered signal is represent i
 \end{figure}
 \clearpage
 \subsection{Digital Filtering} \label{ssc:Digital Filtering}
-For IRI calculation, vertical displacement is needed, so the accelerometer data must be subject to a double integration process.\\
+For IRI calculation, vertical displacement is needed, so the accelerometer data must be subject to a double integration process. 
 Unfortunately, accelerometers have an undesired phenomenon named drift associated with them produced by a small DC component\footnote{DC offset is a zero offset compensation. Refers to an electrical signal in which the value is shifted to a certain amount respect to the reference mass.} in the acceleration signal.\\
 Ideally, there should be no DC from the accelerometer for the measurement of a vibration. The presence of drift can direct to high integration errors. If the acceleration signal was integrated without any proper filtering, the output could become unlimited over time. The figure \ref{fig:Integration of Raw Data} shows what usually occurs to an acceleration signal after a double integration. Figure \ref{fig:Integration of Raw Data}, is an example of acceleration signal that has a negative DC.\\To resolve the drift problem, a filter can be used to remove the DC component from the acceleration signal. Through filtering before integration, drift errors can be eliminated.\\
 For the initial conditions as discusses in \ref{ch:Data Analysis}, a solution is to use filtering.\\  
-After the acceleration signal is integrated, it will possibly have a DC component. Again a filter can be used to remove that DC component of the signal. Furthermore, after the velocity signal is integrated to get position, the position signal can be filtered as well.	\\
-Filtering is a particular frequency process that attenuates certain bands of frequencies while passing others. These filters will pass the high-frequency content of a signal while rejecting the low. The specifications of a filter are its cutoff frequency, pass-band attenuation, and stop-band attenuation. 
+After the acceleration signal is integrated, it will possibly have a DC component. Again a filter can be used to remove that DC component of the signal. Furthermore, after the velocity signal is integrated to get the position, the position signal can be filtered as well.	\\
+Filtering is a particular frequency process that attenuates certain bands of frequencies while passing others. These filters will pass the high-frequency content of a signal while rejecting the low. The specifications of a filter are its cutoff frequency, passband attenuation, and stop-band attenuation. 
 \begin{center}\textit{It is convenient if the filters are identical to each other to simplify the design.}\end{center}
 
 
-There are two types of filters in the digital area: Infinite Impulse Response (IIR) filters and Finite Impulse Response (FIR) filters. 
-
-
-\noindent \textit{\textbf{This is applicable as long as the filter does not attenuate frequencies in the signal band. }}
+\noindent There are two types of filters in the digital area: Infinite Impulse Response (IIR) filters and Finite Impulse Response (FIR) filters. 
 
 \subsubsection{Finite Impulse Response} \label{ssc:Finite Impulse Response}
 Finite Impulse Response, (FIR), is a type of digital filter characterised by a finite response, that, it is cancelled at a finite time.\\
@@ -278,12 +274,11 @@ A FIR filter is described by the following difference equation:
 
 \noindent Where: 
 $x[n]$ is the input signal, $y[n]$ is the output signal, $N$ is the filter order, and $b_{i}$ is the value of the impulse response at instant $i$.\\
-This filter is useful for the double integration process. It is recommended to use it because its phase response is linear, which is desired because different frequencies passing through the filter will have the same time delay.\\
+This filter is useful for the double integration process. It is recommended to use it because its phase response is linear, which is desired because different frequencies passing through the filter will have the same time delay.
 A disadvantage is that the order can be very high, and lead to excessive computations.\\
-For application to a vehicle road test, there is an interest in processing low frequency signals. So the filter must have a low cutoff frequency with a clear transition band, making the order of the filter high. \\
+For application to a vehicle road test, there is an interest in processing low-frequency signals. So the filter must have a low cutoff frequency with a clear transition band, making the order of the filter high. \\
 
-\clearpage
-\paragraph{Moving Average} \leavevmode\\\\
+\paragraph{Moving Average}\label{p:moving_average} \leavevmode\\\\
 An example of FIR filter is the moving average, commonly used in road pavement profiles, that defines the point $A_{i}$ as the average of the points close to that one, for a base window of length $n$ \cite{little_book}, defined like follow:
 \begin{center}
 {\large $ A_{i} = \dfrac{1}{n} \thinspace  \sum\limits_{k=i}^{k=i+n} \thinspace  A_{k}$}
@@ -292,19 +287,19 @@ An example of FIR filter is the moving average, commonly used in road pavement p
 \noindent An example of application of the moving average filter is shown in the figure below:
  
 \begin{figure}[H]	
-\subfloat[Unfiltered]{\includegraphics[scale=0.1]{NoMovingFiltered}}    
-\subfloat[Filtered]{\includegraphics[scale=0.1]{MovingFiltered}}
+\subfloat[Unfiltered Signal]{\includegraphics[scale=0.1]{NoMovingFiltered}}    
+\subfloat[Filtered Signal]{\includegraphics[scale=0.1]{MovingFiltered}}
 
 \centering
-\subfloat[Overlapping]{\includegraphics[scale=0.15]{TotalFiltered}}
+\subfloat[Signal Overlapping]{\includegraphics[scale=0.15]{TotalFiltered}}
 
 The original signal (a) is represent in blue, the filtered signal is represent in orange (b).
  \caption{Application of Moving Average Filter}
   \label{fig:Application of Moving Average	 Filter.}
 \end{figure}
 \subsubsection{Infinite Impulse Response} \label{ssc:Infite Impulse Response}
-In signals theory, Infinite Impulse Response (IIR) is a dynamic system whose impulsive response is not nothing for an infinite amount of time.\\
-IIR filtering, is an alternative approach, that uses a recursive difference equation to represent the filter.
+In signals theory, Infinite Impulse Response (IIR) is a dynamic system whose impulsive response is not anything for an infinite amount of time.\\
+IIR filtering is an alternative approach, that uses a recursive difference equation to represent the filter.
 \begin{center}
 \begin{large}
 $ y[n] = a_{0} \thinspace (\sum\limits_{i=0}^{P}\thinspace  b_{i} \thinspace x[n-1] + \sum\limits_{j=1}^{Q} \thinspace  a_{j} \thinspace  y[n-j])$
@@ -315,15 +310,15 @@ $ y[n] = a_{0} \thinspace (\sum\limits_{i=0}^{P}\thinspace  b_{i} \thinspace x[n
 
 \noindent Where $y[n]$ is the output and $x[n]$ is the input, the output is written as a combination of present and past inputs and past outputs.\\
 
-\noindent IIR has an advantage respect FIR filters, regard to the filter order. An IIR filter has a very lower order than FIR, so the computations can be done faster. However, its phase response isn’t linear like the FIR’s response. The physical meaning of this is if a signal is passed through this filter, different frequency components of this signal will be delayed by different lengths of time, causing distortion. \\
+\noindent IIR has an advantage respect FIR filters, regard to the filter order. An IIR filter has a very lower order than FIR, so the computations can be done faster. However, its phase response is not linear like the FIR’s response. The physical meaning of this is if a signal is passed through this filter, different frequency components of this signal will be delayed by different lengths of time, causing distortion. \\
 There is a way to overcome the problem of having a non-linear phase with the IIR filter. 
-Filter the signal, time reverses the signal, and filter it again with the same filter. A MATLAB command \textit{(filtfilt) } does this operation automatically. 
+Filter the signal, time reverses the signal, and filter it again with the same filter. A MATLAB command \textit{(filtfilt) } allow us to perform this operation. 
 
 \subsubsection{Low Pass Filter} \label{ssc:Low Pass Filter}
-A Low-Pass Filter, is a filter that allows the passage of signals below a cutoff frequency (known as the passband) and attenuates signals above the cutoff frequency (known as the stopband).The exact frequency response of the filter depends on the filter design.\\A low-pass filter is the complement of a high-pass filter.\\
+A Low-Pass Filter is a filter that allows the passage of signals below a cutoff frequency (known as the passband) and attenuates signals above the cutoff frequency (known as the stopband). The exact frequency response of the filter depends on the filter design.\\A low-pass filter is the complement of a high-pass filter.\\
 Through removing some frequencies, the filter creates a smoothing effect. The filter produces slow changes in output values to make it easier to see trends and increase the signal-to-noise ratio with minimal signal degradation.
 Low-pass filters provide a smoother form of a signal, removing the short-term fluctuations, and leaving the longer-term trend.\\
-Low-pass filters, especially moving average filters or Savitzky-Golay filters, are often used to clean up signals, remove noise, perform data averaging.
+Low-pass filters, especially moving average filters or Savitzky-Golay filters, are often used to smooth signals, remove noise, perform data averaging.
 Other common design methods for low-pass FIR-based filters include Kaiser window and equiripple.  
 Design methods for IIR-based filters include Butterworth, Chebyshev (Type-I and Type-II), and elliptic.
 
@@ -343,26 +338,22 @@ Design methods for IIR-based filters include Butterworth, Chebyshev (Type-I and 
 \end{figure}
 
 \subsubsection{High Pass Filter} \label{ssc:High Pass Filter}
-A high-pass attenuates signals below a cutoff frequency (known as the stopband) and passes signals above the cutoff frequency (known as the passband).\\The amount of attenuation for each frequency depends on the filter design used.  It is the complement of a low-pass filter, and they can also be used in conjunction with a low-pass filter to produce a bandpass filter.\\
-
-\noindent High-pass filters are often used to clean up low-frequency noise, and remove low-frequency trends from time series data highlighting the high-frequency trends.\\
-
-
+A high-pass attenuates signals below a cutoff frequency (known as the stopband) and passes signals above the cutoff frequency (known as the passband).The amount of attenuation for each frequency depends on the filter design used.  It is the complement of a low-pass filter and they can also be used in conjunction with a low-pass filter to produce a bandpass filter.\\
+\noindent High-pass filters are often used to smooth low-frequency noise and remove low-frequency trends from time series data highlighting the high-frequency trends.\\
 \noindent Common design methods for high-pass FIR-based filters include Kaiser window, least squares, and equiripple. Design methods for IIR-based filters include Butterworth, Chebyshev (Type-I and Type-II), and elliptic.\\
-
 
 \noindent Below is shown an example of application of High-Pass-FIR filter on a Signal, with a Sample Rate of $1000$ $Hz$ and a Cutoff Frequency of $150$ $Hz$.
 
-\newpage
+
 \begin{figure}[H]
 \centering	
 \subfloat[Filter Response]{\includegraphics[scale=0.29]{HPFResponse}}    
 
-\subfloat[Unfiltered]{\includegraphics[scale=0.11]{HPFUnfiltered}}
+\subfloat[Unfiltered Signal]{\includegraphics[scale=0.11]{HPFUnfiltered}}
 
-\subfloat[Filtered]{\includegraphics[scale=0.11]{HPFFiltered}}
+\subfloat[Filtered Signal]{\includegraphics[scale=0.11]{HPFFiltered}}
 
-\subfloat[Overlapped]{\includegraphics[scale=0.11]{HPFOverlapped}}
+\subfloat[Signal Overlapping]{\includegraphics[scale=0.11]{HPFOverlapped}}
 
 The original signal (b) is represent in blue, the filtered signal is represent in orange (c).
 
@@ -371,12 +362,12 @@ The original signal (b) is represent in blue, the filtered signal is represent i
 \end{figure}
 
 \subsubsection{Band Pass Filter} \label{ssc:Band Pass Filter}
-A band-pass filter is a filter that passes frequencies within a certain range and attenuates frequencies outside that range.\\
-The filter can be designed to perform this task by combining the properties of low-pass and high-pass into a single filter.\\\\
-\noindent The ideal band pass filter has a perfectly flat band pass, does not attenuate the frequencies inside, and completely attenuates all frequencies outside of this range.
-In practice, no band pass filter is ideal. The filter does not completely attenuate all frequencies outside the desired bandwidth.\\\\
-\noindent Between the lower frequency $f_{1}$ and the higher $f_{2}$ of a band pass, is located the resonance frequency , in which the filter gain is maximum. \\
-The filter's band pass is simply the difference between $f_{2}$ and $f_{1}$. 
+A band-pass filter is a filter that passes frequencies within a certain range and attenuates frequencies outside that range. 
+The filter can be designed to perform this task by combining the properties of low-pass and high-pass into a single filter.\\
+\noindent The ideal band pass filter has a perfectly flat bandpass, does not attenuate the frequencies inside, and completely attenuates all frequencies outside of this range.
+In practice, no band pass filter is ideal. The filter does not completely attenuate all frequencies outside the desired bandwidth.\\
+\noindent Between the lower frequency $f_{1}$ and the higher $f_{2}$ of a band pass, is located the resonance frequency, in which the filter gain is maximum. 
+The filter's bandpass is simply the difference between $f_{2}$ and $f_{1}$. 
 
 \noindent Below is shown an example of the Response of a Band Pass Filter with lower frequency $f_{1} \thinspace = \thinspace 250 \thinspace Hz$ and higher frequency $f_{2} \thinspace = \thinspace 550 \thinspace Hz$. 
 
@@ -387,9 +378,9 @@ The filter's band pass is simply the difference between $f_{2}$ and $f_{1}$.
   \label{fig:Band Pass Filter Response}
 \end{figure}
 \section{Fast Fourier Transform} \label{sc:Fast Fourier Transform}
-Various data filtering techniques have been analysed, but in order to understand in which frequencies we find the signal disturbance, and so choose the cutoff frequency properly the Fourier Transform can be used.\\
+Various data filtering techniques have been analysed but in order to understand in which frequencies we find the signal disturbance, and so choose the cutoff frequency properly the Fourier Transform can be used.\\
 The Fourier Transform is a mathematical technique widely used in science, engineering and digital signal processing. 
-The mathematical technique called the Discrete Fourier Transform (DFT) takes a discrete time series of $n$ equally spaced numbers and transforms or converts this time series through a mathematical operation into a set of $n$ complex numbers defined into the frequency domain from the time domain. \\
+The mathematical technique called the Discrete Fourier Transform (DFT) takes a discrete time series of $n$ equally spaced numbers and transforms or converts this time series through a mathematical operation into a set of $n$ complex numbers defined into the frequency domain from the time domain. 
 DFT is an extremely powerful mathematical tool that allows to view signals in a different domain, inside which several difficult problems become very simple to analyse respect the original time series, in which is computationally is hard to do.\\
 If the time series is made up of oscillating signals of various frequencies plus noise, in the frequency domain we can found frequencies we have no interest and also found the noise content of the price data.\\
 
@@ -422,7 +413,7 @@ If we take for example this signal:
 
 \section{GPS points division} \label{sc:GPS points division}
 Another problem to fix is the way geolocation points are identified.\\
-As discussed in Chapter 3, (GPS section, page), GPS records the data at a frequency of $1$ $Hz$ (every second), however, the acceleration data as we have seen in our case are recorded at $100$ $Hz$ (every $10$ $ms$).\\
+As discussed in Chapter\ref{ch:Inertial Measurement Unit} , (GPS section\ref{pr:GPS}, on a page: \pageref{pr:GPS}), GPS records the data at a frequency of $1$ $Hz$ (every second), however, the acceleration data as we have seen in our case are recorded at $100$ $Hz$ (every $10$ $ms$). 
 For every GPS recording, $100$ acceleration data will be registered. This puts us in front of a problem because if we want to map the road surface correctly, GPS data need to be very close to each other.\\
 To understand better this factor, two different GPS coordinates were identified:
 
@@ -485,7 +476,7 @@ i \GETS y\\
 
 
 
-The proposed algorithm, when distinguishing two points having a distance between them different from $0$ $\si{\km}$, calculated by the \textit{haversine formula} that will be explained later, begins the definition of intermediate GPS points in the segment.\\
+\noindent The proposed algorithm, when distinguishing two points having a distance between them different from $0$ $\si{\km}$, calculated by the \textit{haversine formula}\ref{ssc:Haversine Formula} that will be explained later, begins the definition of intermediate GPS points in the segment.\\
 Beginning from the $Start$ point, until to the $End$ point, all intermediate points for both Latitude and Longitude will be calculated, as the previous point plus the difference in Latitude between the Start point and the End point, divided by the number of occurrences between Start and End, analogue procedure for Longitude.\\\\
 Final result is shown in the figure:
 
@@ -501,12 +492,12 @@ This formula is particularly useful because it allows calculating the geographic
 \begin{itemize}
 \item Determine if there is a not null distance between two geographic points, so that the segment can be subdivided\ref{alg:Redefine Latitude And Longitude}.
 \item Applied during the data processing, since following the subdivision, all consecutive geolocation points will have a very small distance.\\
-For example, if we go at very low speeds, and take two consecutive points, their distance can be measured in the order of $cm$, otherwise, at very high speeds, the distance between the points is usually measured approximately in the order of a few $mt$.\\
-The points to being correctly displayed on the map must be at a specified distance ($distance_{th}$) from each other.
-It will be checked from an initial point $Start$, what are all the points that gradually adding their distances to each other, reaching $distance_{th}$, so a new point is created, and all those considered to arrive at $distance_{th}$ are eliminating (for acceleration values, however, different operations are performed depending on the index being calculated).This operation will be repeated for all points in the data set, until we will have each point distant from each other by $distance_{th}$.
+For example, if we go at very low speeds, and take two consecutive points, their distance can be measured in the order of $cm$, otherwise, at very high speeds, the distance between the points are usually measured approximately in the order of a few $mt$.\\
+The points to be correctly displayed on the map must be at a specified distance ($distance_{th}$) from each other.
+It will be checked from an initial point $Start$, what are all the points that gradually adding their distances to each other, reaching $distance_{th}$, so a new point is created, and all those considered to arrive at $distance_{th}$ are eliminating (for acceleration values, however, different operations are performed depending on the index being calculated).This operation will be repeated for all points in the data set until we will have each point distant from each other by $distance_{th}$.
 \end{itemize}
 
-Haversine Formula calculate geographic distance on earth. Given two different latitude – longitude values of two different point on earth, then with the help of Haversine Formula, it is easily possible compute the great-circle distance (The shortest distance between two points on the surface of a Sphere). 		
+\noindent Haversine Formula calculates geographic distance on earth. Given two different latitude – longitude values of two different point on earth, then with the help of Haversine Formula, it is easily possible compute the great-circle distance (The shortest distance between two points on the surface of a Sphere). 		
 \noindent The haversine formula is defined like follow:
 
 \noindent Given two points:
@@ -515,9 +506,7 @@ $Start$ = ($\phi_{1} , \lambda_{1}$)\\
 $End$ = ($\phi_{2} , \lambda_{2}$)
 \end{center}
 
-Where, $\phi$ represent the $Latitude$ and $\lambda$ the Longitude.\\
-
-$r$ is the radius of the earth, and $d$ the distance between the two points:\\
+Where, $\phi$ represent the $Latitude$ and $\lambda$ the Longitude, $r$ is the radius of the earth, and $d$ the distance between the two points:\\
 
 \begin{center}
 

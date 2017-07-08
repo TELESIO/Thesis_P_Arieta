@@ -1,53 +1,58 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\contentsline {section}{\textbf {Abstract}}{ix}{section*.5}
+\contentsline {section}{\textbf {Abstract}}{viii}{section*.5}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Road surface monitoring instruments}{4}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Profilometer}{4}{subsection.1.1.1}
-\contentsline {subsubsection}{\numberline {1.1.1.1}1. Instrument mobility}{5}{subsubsection.1.1.1.1}
-\contentsline {subsubsection}{\numberline {1.1.1.2}2. Detectable wavelength range}{5}{subsubsection.1.1.1.2}
-\contentsline {subsubsection}{\numberline {1.1.1.3}3. Nature of instrument contact}{6}{subsubsection.1.1.1.3}
-\contentsline {paragraph}{\numberline {1.1.1.3.1}Contact Profilometers}{6}{paragraph.1.1.1.3.1}
-\contentsline {paragraph}{\numberline {1.1.1.3.2}Contact less Profilometers}{7}{paragraph.1.1.1.3.2}
-\contentsline {subsubsection}{\numberline {1.1.1.4}4. Operating principle of the device}{7}{subsubsection.1.1.1.4}
-\contentsline {section}{\numberline {1.2}Motivation}{9}{section.1.2}
-\contentsline {chapter}{\numberline {2}International Roughness Index}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}History}{11}{section.2.1}
-\contentsline {section}{\numberline {2.2}Definition}{13}{section.2.2}
-\contentsline {section}{\numberline {2.3}Measurement}{13}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Motivation of Correlation Equations}{14}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Information Quality Level}{14}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Quarter Car Model}{18}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Calculation of IRI}{19}{section.2.4}
-\contentsline {chapter}{\numberline {3}Inertial Measurement Unit}{21}{chapter.3}
-\contentsline {section}{\numberline {3.1}Operational Principles}{22}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Uses}{24}{subsection.3.1.1}
-\contentsline {section}{\numberline {3.2}Inertial Navigation System}{25}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Principal Sensors}{25}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Smartphone Sensors}{26}{section.3.3}
-\contentsline {paragraph}{\numberline {3.3.0.0.1}{\relax \fontsize {14.4}{18}\selectfont Accelerometer}}{27}{paragraph.3.3.0.0.1}
-\contentsline {paragraph}{\numberline {3.3.0.0.2}{\relax \fontsize {14.4}{18}\selectfont Gyroscopes}}{29}{paragraph.3.3.0.0.2}
-\contentsline {paragraph}{\numberline {3.3.0.0.3}{\relax \fontsize {14.4}{18}\selectfont GPS}}{30}{paragraph.3.3.0.0.3}
-\contentsline {paragraph}{\numberline {3.3.0.0.4}{\relax \fontsize {14.4}{18}\selectfont Other Sensors}}{32}{paragraph.3.3.0.0.4}
-\contentsline {section}{\numberline {3.4}Error}{33}{section.3.4}
-\contentsline {chapter}{\numberline {4}Data Analysis}{35}{chapter.4}
-\contentsline {section}{\numberline {4.1}Accelerometer Reorientation}{39}{section.4.1}
-\contentsline {section}{\numberline {4.2}Data Filtering}{41}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Preliminary Filtering}{41}{subsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.1.1}Remove Engine Vibrations Filter}{41}{subsubsection.4.2.1.1}
-\contentsline {subsubsection}{\numberline {4.2.1.2}Zero Velocity Filter}{43}{subsubsection.4.2.1.2}
-\contentsline {subsection}{\numberline {4.2.2}Digital Filtering}{45}{subsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.1}Finite Impulse Response}{45}{subsubsection.4.2.2.1}
-\contentsline {paragraph}{\numberline {4.2.2.1.1}Moving Average}{47}{paragraph.4.2.2.1.1}
-\contentsline {subsubsection}{\numberline {4.2.2.2}Infinite Impulse Response}{47}{subsubsection.4.2.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.3}Low Pass Filter}{48}{subsubsection.4.2.2.3}
-\contentsline {subsubsection}{\numberline {4.2.2.4}High Pass Filter}{50}{subsubsection.4.2.2.4}
-\contentsline {subsubsection}{\numberline {4.2.2.5}Band Pass Filter}{52}{subsubsection.4.2.2.5}
-\contentsline {section}{\numberline {4.3}Fast Fourier Transform}{52}{section.4.3}
-\contentsline {section}{\numberline {4.4}GPS points division}{54}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Haversine Formula}{57}{subsection.4.4.1}
-\contentsline {chapter}{\numberline {5}System Development}{61}{chapter.5}
-\contentsline {section}{\numberline {5.1}Data Collect}{62}{section.5.1}
-\contentsline {section}{\numberline {5.2}Data Processing}{63}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Simple Acceleration Points}{64}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Critical Points}{67}{subsection.5.2.2}
-\contentsline {section}{\textbf {Acknowledgments}}{70}{section*.48}
+\contentsline {paragraph}{Contact Profilometers}{6}{section*.9}
+\contentsline {paragraph}{Contactless Profilometers}{6}{section*.11}
+\contentsline {section}{\numberline {1.2}Motivation}{8}{section.1.2}
+\contentsline {chapter}{\numberline {2}International Roughness Index}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}History}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Definition}{11}{section.2.2}
+\contentsline {section}{\numberline {2.3}Measurement}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Motivation of Correlation Equations}{12}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Information Quality Level}{12}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Quarter Car Model}{16}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Calculation of IRI}{18}{section.2.4}
+\contentsline {chapter}{\numberline {3}Inertial Measurement Unit}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Operational Principles}{20}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Applications}{21}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}Inertial Navigation System}{22}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Principal Sensors}{22}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Smartphone Sensors}{23}{section.3.3}
+\contentsline {paragraph}{{\relax \fontsize {14.4}{18}\selectfont Accelerometer}}{24}{section*.21}
+\contentsline {paragraph}{{\relax \fontsize {14.4}{18}\selectfont Gyroscopes}}{25}{section*.23}
+\contentsline {paragraph}{{\relax \fontsize {14.4}{18}\selectfont GPS}}{26}{section*.25}
+\contentsline {paragraph}{{\relax \fontsize {14.4}{18}\selectfont Other Sensors}}{28}{section*.27}
+\contentsline {section}{\numberline {3.4}Accuracy}{29}{section.3.4}
+\contentsline {chapter}{\numberline {4}Data Analysis}{30}{chapter.4}
+\contentsline {section}{\numberline {4.1}Accelerometer Reorientation}{35}{section.4.1}
+\contentsline {section}{\numberline {4.2}Data Filtering}{37}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Preliminary Filtering}{37}{subsection.4.2.1}
+\contentsline {subsubsection}{Filtering Engine Vibrations}{37}{section*.34}
+\contentsline {subsubsection}{Zero Velocity Filter}{39}{section*.36}
+\contentsline {subsection}{\numberline {4.2.2}Digital Filtering}{41}{subsection.4.2.2}
+\contentsline {subsubsection}{Finite Impulse Response}{41}{section*.38}
+\contentsline {paragraph}{Moving Average}{42}{section*.39}
+\contentsline {subsubsection}{Infinite Impulse Response}{43}{section*.41}
+\contentsline {subsubsection}{Low Pass Filter}{43}{section*.42}
+\contentsline {subsubsection}{High Pass Filter}{45}{section*.44}
+\contentsline {subsubsection}{Band Pass Filter}{47}{section*.46}
+\contentsline {section}{\numberline {4.3}Fast Fourier Transform}{47}{section.4.3}
+\contentsline {section}{\numberline {4.4}GPS points division}{49}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Haversine Formula}{52}{subsection.4.4.1}
+\contentsline {chapter}{\numberline {5}System Development}{55}{chapter.5}
+\contentsline {section}{\numberline {5.1}Data Collect}{56}{section.5.1}
+\contentsline {section}{\numberline {5.2}Data Processing}{57}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Simple Acceleration Points}{58}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Critical Points}{61}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}IRI}{64}{subsection.5.2.3}
+\contentsline {subsubsection}{Double Integration Process}{65}{section*.62}
+\contentsline {subsubsection}{Calculation of IRI from obtained displacement data}{70}{section*.71}
+\contentsline {subsubsection}{Correlation phase}{71}{section*.73}
+\contentsline {section}{\numberline {5.3}Data Storing}{71}{section.5.3}
+\contentsline {section}{\numberline {5.4}Viewing on interactive map}{72}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{75}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusions}{75}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Work}{77}{section.6.2}
+\contentsline {section}{\textbf {Acknowledgments}}{78}{section*.77}
