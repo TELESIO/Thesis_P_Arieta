@@ -1,0 +1,110 @@
+\documentclass[11pt,a4paper,openany]{book}
+\frontmatter
+\usepackage{subfiles}
+\usepackage{blindtext}
+\usepackage[newcentury]{quotchap}
+\usepackage[left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[none]{hyphenat}
+\usepackage{fancyhdr}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{biblatex}
+\usepackage{siunitx}
+\usepackage{systeme,mathtools}
+\usepackage{subfig}
+\usepackage{amstext} 
+\usepackage{float} 
+\usepackage{xr-hyper}
+\usepackage{pseudocode}
+
+
+\DeclareRobustCommand{\officialeuro}{%
+  \ifmmode\expandafter\text\fi
+  {\fontencoding{U}\fontfamily{eurosym}\selectfont e}}
+\usepackage{listings}
+
+\graphicspath{ {images/} }
+\addbibresource{bibliography.bib}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\slshape ``Monitoring road surface conditions using IMU"}	
+\fancyhead[R]{\slshape Pasquale Arieta 161987}	
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\baselinestretch}{1.5}
+
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\Huge{\textbf{Universit\`a della Calabria}}\\	
+\begin{figure}[ht]
+\centering
+\vspace{5mm}
+\includegraphics[scale=0.8]{UniversityLogo}\\
+\end{figure}
+\LARGE{\textbf{Dipartimento di Matematica e Informatica}}\\
+\vspace{9mm}
+\LARGE{\textbf{Corso di Laurea in Informatica}}\\
+\vspace{15mm}
+%\large{\textbf{\myDegreeDate}}\\
+\Huge{\textbf{MONITORING ROAD SURFACE CONDITIONS USING IMU}}\\
+\vspace{8mm}
+\end{center}
+
+\vspace{7mm}
+\begin{center}
+\Large{\textbf{SUPERVISORS}}
+\hfill
+\Large{\textbf{CANDIDATE}}\\
+\vspace{3mm}
+\large{\textbf{Prof. Donato D'Ambrosio}}
+\hfill
+\large{\textbf{Pasquale Arieta}}\\
+\vspace{2mm}
+\large{\textbf{Prof. William Spataro}}
+\hfill
+\large{\textbf{Student Number: 161987}}
+\begin{flushleft}
+\large{\textbf{Dott. Davide Spataro}}
+\end{flushleft}
+\hfill
+\end{center}
+
+\begin{center}
+\line(1,0){400}\\[5mm]
+{\large{\bf Academic Year 2016/2017}}\\
+\end{center}
+\end{titlepage}
+\thispagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+\listoffigures
+\thispagestyle{empty}
+\listoftables
+\thispagestyle{empty}
+\clearpage
+
+
+
+
+\subfile{Sections/Abstract/Abstract_EN}
+\addcontentsline{toc}{section}{\textbf{Abstract}}
+\subfile{Sections/Abstract/Abstract_IT}
+\mainmatter
+\thispagestyle{empty}
+\subfile{Chapters/Chapter1}
+\subfile{Chapters/Chapter2}
+\subfile{Chapters/Chapter3}
+\subfile{Chapters/Chapter4}
+\subfile{Chapters/Chapter5}
+\subfile{Chapters/Chapter6}
+\newpage
+\section*{Acknowledgments}
+\addcontentsline{toc}{section}{\textbf{Acknowledgments}}
+\printbibliography
+\end{document}	

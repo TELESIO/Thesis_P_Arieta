@@ -1,0 +1,42 @@
+\documentclass[tesi]{subfiles}
+
+\IfEq{\jobname}{\detokenize{tesi}}{}{%
+	\externaldocument{Chapter1}  
+	\externaldocument{Chapter2}    
+	\externaldocument{Chapter3}
+    \externaldocument{Chapter4}
+}
+\begin{document}
+
+\chapter{Conclusions and Future Work}\label{ch:c_and_fw}
+\section{Conclusions}
+As we have seen in all the previous chapters that are focused to explain, the development of the system, the calculations of the various indices, and the problems associated with the monitoring of the road surface conditions, we can deduce that:\\\\
+\noindent Efficient monitoring systems need very expensive instrumentation as we have seen in Chapter\ref{ch:Introduction}.\\\\
+\noindent However, a monitoring system that collects data from the low-cost sensors, such as using sensors within the smartphone, can be developed.\\
+The acceleration sensor must be correctly oriented in relation to the vehicle axes, and it can give good values that are closely related to the vibrations perceived by the vehicle with the surface of the road. It has also been seen that, in order to have consistent information over a certain time interval, it is appropriate to identify an appropriate sample frequency to measure the values.\\
+Subsequently, during processing, an adequate filtering system is required that is strongly dependent on the type of noise the signal is subject to. In order to process it depending on what you want to determine, having useful information, with a minimum level of noise inside the data processed.\\
+It has also been seen that it is possible to calculate a standard reference index, which is the International Roughness Index,  obtained from the measurements of Class1 or Class2 instruments, but also by Class3 instruments (as our case) by using an equation of correlation.\\\\
+\noindent Three indicators have been extrapolated from our system:
+\begin{description}
+\item[Simple Accelerations Points:] Has provided us with useful information on the acceleration signal resulting from the recordings. It possible to say that the acceleration signal depending on the amount of information and the type of road in question, without making any sort of intensive filtration operation, but only mediated by a set of points collected within certain distances, we can affirm that it not provide us any kind of information on road surface conditions. In fact, we saw that apparently, an urban road was more advantageous than a highway. This leads us to understand that we need a mechanism and certain procedural standards for calculating the road surface conditions to obtain a significant indicator such as IRI.
+\item[Critical Points:] Instead, it is able to locate accurately the most critical road asperities detected during the signal processing phase. In fact, both on the signal and visual inspections were carried out, to see if it was possible to identify points where bumps, large holes, and other types of anomalies are located and can be directly identified from the signal. And as a result of various information collected, some thresholds have been identified, which provide us with the correct localization of the asperities described and also provide a degree of their danger. Limits (minimum and maximum) have been defined. We can see on the map the different degrees, depending on the color variations to which the respective points are associated. A range of color that swings between orange and red was used to identify these anomalies.
+\item[IRI:] Has been widely discussed about this index. In Chapter\ref{ch:IRI}, we saw what it is and how it is possible to calculate it.
+It has enabled us to provide, in accordance with its scale, an indication of the quality and comfort level associated with certain road sections. Comprising it is calculated from the vertical displacement between the vehicle and the surface, we have broadly analyzed the problems of double-integration of the vertical acceleration signal, showing the various disturbance and error factors that conduct in incorrect results, and the various steps with it was subsequently determined. This index is usually extracted from measurements made with specific instruments such as profilometers, but it is also possible to detect it by Class3 instrumentation through a correlation equation. It emerged that:
+\begin{itemize}
+\item Despite this instrumentation is not available, the results obtained following the data processing in accordance with the simulation of the quarter car model have provided us good results, compared to the road in question, and moving not much from the  IRI scale, indicating the degree of comfort and deterioration of the surface in relation to the result obtained.
+\item However, a correlation equation for these systems is necessary, because they can shift from the actual level of pavement quality. However, they may not present the need of correlation to certain types of roads, while they need them on others.Since it was not possible to create one, it was only simulated. Although, as previously mentioned, the values obtained represent the degree of damage and comfort of the road surface sufficiently well.
+\end{itemize}
+\end{description}
+
+
+
+\noindent  Conclusively a system for monitoring road surface conditions can be developed considering a margin of error by making appropriate operations with cheap sensors, compared to most expensive directly related to these procedures. 
+\section{Future Work}
+Inertial sensors are characterised by a constantly evolving and advancing technology, providing the ability to create autonomous systems for understanding and managing data obtained from them. Specifically referring to this scope the system could be greatly integrated by adding different features.\\
+First of all, the goal is to create a smartphone application that can first make recordings from sensors and send them to a server for their processing. To extend it in such a way as to enable the driver to have a navigation system provided not only to the route he wishes to do but to be informed of the real conditions of the road he wants to travel by providing him with real-time information based on his location.\\
+One point of interest is developing a vocal assistant that can alert us to near critical locations or other types of useful information during the travel.\\
+A future application should allow, choose and display the desired route based on road surface conditions, but also based on current traffic conditions since these IMU also provide other data processing procedures to determine the amount of traffic in some traffic time periods associated with the road sections in question. Or you could create statistics on average fuel consumption associated with road sections, and choose accordingly.\\
+It is also possible to understand from sensors whether an accident has occurred, so the application may be able to understand it instantly and promptly send a signal to the rescue.\\
+And finally, and more importantly, with regard to the processing phase for IRI calculation in order to minimise the error level as much as possible, a correlation equation should be identified using an instrument of Class1.
+
+\end{document}
