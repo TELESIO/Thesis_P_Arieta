@@ -16,13 +16,13 @@ The monitoring of the conditions of a road surface, such as the detection of ano
 
 The accurate evaluation of the quality of a road surface is a critical issue: transport system could become more efficient, comfortable and, most of all, safer. In fact, the presence of different types of anomalies on a road surface can make the transport-related energy efficiency worse, by increasing fuel consumption, a decay of suspensions and brakes. Crossing one of these anomalies both generates vibrations inside the tires' and suspensions' system, and affects the deformation of the tire, causing energy leaks and increasing rolling resistance. In addition, an increased risk of major damage to the vehicle (broken rims, tires puncture, or damage to the car body) can occur.
 
-
+\clearpage
 Road pavement monitoring is usually carried out through a variety of instruments, most of all various types of profilometers; however, especially in the most advanced cases, a profilography\footnote{The profilograph is a device used to measure pavement surface roughness} can be used, too.
 Given the high cost of these instruments, the use of mobile technologies or cheap hardware sensors is widely adopted in this area, with the aim of providing to road users the opportunity to obtain real-time information about the road surface conditions and the traffic situation, or understand road accident cases promptly. All of that is made possible thanks to the hardware of these devices. In fact, if we mainly focus on smartphones and tablets, the majority of them uses a three-axis accelerometer to collect acceleration data, due to vehicle motion, and a GPS receiver to obtain location information of the current specific road segment.
 
 
 This work focuses on the development of a system for the road surface conditions monitoring, that makes use of inertial measurement units (also known as \textbf{\textit{IMU}}), electronic hardware systems based on inertial sensors, such as the ones in our smartphones/tablets or Arduino devices, which have much lower prices than the standard instruments used for this task.
-The system is based both on the reading of data collected through the smartphone, and on the post-processing elaborations of the GPS signal and acceleration data, (in which particular attention is given to vertical acceleration impulses, corresponding to high-energy peaks and possibly representing an "\textit{anomaly}" of the road surface).
+The system is based both on the reading of data collected through the smartphone, and on the post-processing elaborations of the GPS signal and acceleration data, (in which particular attention is given to vertical acceleration impulses, corresponding to \textbf{\textit{high-energy peaks}} and possibly representing an "\textit{anomaly}" of the road surface).
 After all the data has been processed, the following benchmarks for the road surface conditions are extrapolated:
 \begin{itemize}\label{it:indexes}
 \item \textbf{IRI}: International Roughness Index: the international standard for road surface monitoring.
@@ -64,10 +64,11 @@ ISO-Standard\cite{iso_standard} identifies the following four fundamental proper
 \item [Stationary in presence of traffic]: placed directly on the road surface at the point you want to detect.
 \item [Stationary in absence of traffic]: cannot be moved quickly from a measurement site, e.g: during the measurement on a site, that one will be closed to the traffic.
 \end{description}
+\clearpage
 \item \textbf{Detectable wavelength range:}\\ According to ISO-Standard\cite{iso_standard}, five ranges are indicated for this property, each-one distinguished by a letter:
 
-
-\begin{table}[ht]
+\vspace{0.5cm}
+\begin{table}[H]
 \centering
     \begin{tabular}{ | l | l | l | l | l | l |}
 
@@ -82,8 +83,8 @@ ISO-Standard\cite{iso_standard} identifies the following four fundamental proper
 \end{table}
 
 The wavelength allows understanding the type of a road pavement. In fact, the road surface, also called \textit{texture}, is divided among four distinct categories: microtexture, macrotexture, mega-texture and irregularity. Referring to the wavelength parameters shown in the table\ref{table:iso_wave}, the texture categories fall in this wavelength range\cite{sayers1996interpretation}:
-
-\begin{table}[ht]
+\vspace{0.5cm}
+\begin{table}[H]
 \centering
     \begin{tabular}{ | l | l | l | l | l |}
 

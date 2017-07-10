@@ -19,62 +19,43 @@ ylabel('Acceleration')
 [Lat, Lon] = redefineLatitudeAndLongitude(Latitudine, Longitudine);
 [Distance, DistancePro] = DistanceCalculator(Lat, Lon);
 
-%rimozione dei punti con velocità nulla
-Acceleration = removeNoVelocityComponents(LinearAccelerometerZ, Velocita_KMH);
+T(1,1) = 0.01;
+for index=2:numel(Tempo_ms)
+T(index,1) = T(index-1) + 0.01;
+end
+
 
 %rimozione del rumore di fondo generato dal motore
-Acceleration2 = removeEngineRumors(Acceleration);
-
-
-figure
-subplot(3,1,1)
-plot(Distance, AccelerometroLineareZ)
-subplot(3,1,2)
-plot(Distance, Acceleration)
-subplot(3,1,3)
-plot(Distance, Acceleration2)
-
+Acceleration = removeEngineRumors(LinearAccelerometerZ);
+%rimozione dei punti con velocità nulla
+Acceleration2 = removeNoVelocityComponents(Acceleration, Velocita_KMH);
 
 %Low-Pass  moving average filter
-Acceleration3 = windowingFilter(Acceleration2, 5);
+Acceleration3 = windowingFilter(Acceleration2, 2);
+Acceleration3 = windowingFilter(Acceleration3, 2);
 
-%low-pass FIR-based filters
-Acceleration4 = Cheby2Order(100, Acceleration3);
-
-figure
-subplot(2,1,1)
-plot(Distance, Acceleration2)
-subplot(2,1,2)
-plot(Distance, Acceleration4)
-
-
+Acceleration4 = Filters(Acceleration3,0.3);
 figure
 plot(Distance, Acceleration4)
 title('After Filtering')
 
 
 %Integrazione dell'accelerazione per ottenere la velocità
-v = cumtrapz(Acceleration4);
-v = v * 0.01;
-
-figure
-plot(Distance, v)
-title('Velocity')
-xlabel('Distance')
-ylabel('Velocity')
-
-%low-pass FIR-based filters
-v_fit = Cheby2Order(100, v);
+v = cumtrapz(T,Acceleration4);
+v_fit = Filters(v,0.15);
 
 
 
 %integrazione della velocità per ottenere lo spostamento
-d = cumtrapz(v_fit);
-d = d * 0.01;
+d = cumtrapz(T, v_fit);
+d = -d;
 
-
+max_distance = max(DistancePro)/2;
+if(max_distance<1)
+    max_distance = 1;
+end
 %Raccolta dei punti all'interno di una distanza specifica.
-[verticalDisplacement, DistanceProgress, DistancesCOv, NewLatitudine, NewLongitudine] = handleIntoSpecificDistance(d, DistancePro, Lat, Lon, 5);
+[verticalDisplacement, DistanceProgress, DistancesCOv, NewLatitudine, NewLongitudine] = handleIntoSpecificDistance(d, DistancePro, Lat, Lon, 1);
 
 figure
 plot(Distance, d)
@@ -93,10 +74,6 @@ subplot(3,1,3)
 plot(Distance, d)
 
 
-    if(mean(verticalDisplacement) < 0)
-
-        verticalDisplacement = verticalDisplacement - mean(verticalDisplacement);
-    end
  
 
     figure

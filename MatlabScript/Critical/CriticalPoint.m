@@ -11,6 +11,7 @@ plot(Tempo_ms, AccelerometroLineareZ)
 title('Raw Accelerometer')
 xlabel('time')
 ylabel('Acceleration')
+
 %ridefinizione della latitudine e longitudine in segmenti piccoli
 [Lat, Lon] = redefineLatitudeAndLongitude(Latitudine, Longitudine);
 [LinearAccelerometerX, LinearAccelerometerY, LinearAccelerometerZ] = reorientedAcceleration(AccelerometroLineareX, AccelerometroLineareY, AccelerometroLineareZ, PITCH_OrientamentoX, ROLL_OrientamentoY);
@@ -20,25 +21,23 @@ title('Reoriented')
 xlabel('time')
 ylabel('Acceleration')
 
-%rimozione dei punti con velocità nulla
-Acceleration = removeNoVelocityComponents(LinearAccelerometerZ, Velocita_KMH);
-figure
-plot(Tempo_ms, Acceleration)
-title('Accelerometer without velocity')
-xlabel('time')
-ylabel('Acceleration')
 
 %rimozione del rumore di fondo generato dal motore
-Acceleration2 = removeEngineRumors(Acceleration);
+Acceleration = removeEngineRumors(LinearAccelerometerZ);
 figure
-plot(Tempo_ms, Acceleration2)
+plot(Tempo_ms, Acceleration)
 title('Accelerometer without Engine Rumors')
 xlabel('time')
 ylabel('Acceleration')
 
 
-
-
+%rimozione dei punti con velocità nulla
+Acceleration2 = removeNoVelocityComponents(Acceleration, Velocita_KMH);
+figure
+plot(Tempo_ms, Acceleration2)
+title('Accelerometer without velocity')
+xlabel('time')
+ylabel('Acceleration')
 
 
 %rimozione di tutti i valori al di sotto di una specifica soglia

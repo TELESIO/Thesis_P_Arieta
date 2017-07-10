@@ -29,21 +29,8 @@ ylabel('Acceleration')
 [Distance, DistancePro] = DistanceCalculator(Lat, Lon);
 
 
-
-%rimozione dei punti con velocità nulla
-Acceleration = removeNoVelocityComponents(LinearAccelerometerZ, Velocita_KMH);
-
-
-figure
-plot(Tempo_ms, Acceleration)
-title('Accelerometer without velocity')
-xlabel('time')
-ylabel('Acceleration')
-
 %rimozione del rumore di fondo generato dal motore
-Acceleration2 = removeEngineRumors(Acceleration);
-
-
+Acceleration = removeEngineRumors(LinearAccelerometerZ);
 figure
 plot(Tempo_ms, Acceleration2)
 title('Accelerometer without Engine Rumors')
@@ -52,9 +39,16 @@ ylabel('Acceleration')
 
 
 
+%rimozione dei punti con velocità nulla
+Acceleration2 = removeNoVelocityComponents(Acceleration, Velocita_KMH);
+figure
+plot(Tempo_ms, Acceleration)
+title('Accelerometer without velocity')
+xlabel('time')
+ylabel('Acceleration')
+
 %Raccolta dei punti all'interno di una distanza specifica.
 [Acceleration3, DistanceProgress, DistancesCOv, NewLatitudine, NewLongitudine] = handleIntoSpecificDistance(Acceleration, DistancePro, Lat, Lon, 10);
-
 figure
 plot(DistanceProgress, Acceleration3)
 title('Accelerometer Point Result')
