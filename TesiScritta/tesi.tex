@@ -1,5 +1,7 @@
 \documentclass[11pt,a4paper,openany]{book}
 \frontmatter
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{subfiles}
 \usepackage{blindtext}
 \usepackage[newcentury]{quotchap}
@@ -19,13 +21,16 @@
 \usepackage{xr-hyper}
 \usepackage[hidelinks]{hyperref}
 \usepackage{pseudocode}
+\usepackage[english, italian]{babel}
+\usepackage{listings}
+
 
 
 
 \DeclareRobustCommand{\officialeuro}{%
   \ifmmode\expandafter\text\fi
   {\fontencoding{U}\fontfamily{eurosym}\selectfont e}}
-\usepackage{listings}
+
 
 \graphicspath{ {images/} }
 \addbibresource{bibliography.bib}
@@ -41,9 +46,11 @@
 
 
 \begin{document}
+
+\selectlanguage{english}
 \begin{titlepage}
 \begin{center}
-\Huge{\textbf{Universit\`a della Calabria}}\\	
+\Huge{\textbf{Università della Calabria}}\\	
 \begin{figure}[ht]
 \centering
 \vspace{5mm}
@@ -93,7 +100,6 @@
 
 
 
-
 \subfile{Sections/Abstract/Abstract_EN}
 \addcontentsline{toc}{section}{\textbf{Abstract}}
 \subfile{Sections/Abstract/Abstract_IT}
@@ -106,7 +112,9 @@
 \subfile{Chapters/Chapter5}
 \subfile{Chapters/Chapter6}
 \newpage
-\section*{Acknowledgments}
-\addcontentsline{toc}{section}{\textbf{Acknowledgments}}
+\selectlanguage{italian}
+\subfile{Sections/Ringraziamenti/Ringraziamenti}
+\addcontentsline{toc}{section}{\textbf{Ringraziamenti}}
+\selectlanguage{english}
 \printbibliography
 \end{document}	

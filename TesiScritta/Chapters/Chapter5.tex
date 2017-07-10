@@ -51,6 +51,7 @@ For out analysis, data was gathered from the following sensors:
 \item Date
 \item Time
 \end{itemize}
+\clearpage
 The data are updated at the highest frequency \textit{"Very Fast"}, while the sampling frequency can be chosen within a range that goes:
 \begin{center}
 $fs_{min} \quad <= \thinspace f_{s} \thinspace <= \thinspace fs_{max}$\\
@@ -86,13 +87,13 @@ These will be processed with MATLAB (Matrix Laboratory) a multi-paradigm numeric
 Initially, the $.xls$ file is read, and each column of it depending on the data nature (numeric or string) will be stored in a vector, which can be found in the MATLAB workspace.
 Once the raw data has been read, the indices computation starts.
 
-
+\clearpage
 \subsection{Simple Acceleration Points}\label{ssc:Simple Accelerations Points}
 This index helps principally to show how the acceleration component changes depending on different points on the road surface.
 It notes that an appropriate methodology is needed to calculate the surface conditions because the representation of the acceleration signal alone would not be satisfactory to provide all the conditions of a given road segment. This index will be calculated on a segment of a predetermined length ($distance_{segment}$, from now it is called $ds$) in which an $\chi$ value will be associated and calculated as follows:
 
 \begin{center}
- $\chi \thinspace = \left( \sum \limits_{i=1}^{N} \thinspace a_{i} \right) \thinspace \dfrac{1}{N}$
+{\large  $\chi \thinspace = \left( \sum \limits_{i=1}^{N} \thinspace a_{i} \right) \thinspace \dfrac{1}{N}$}
 \end{center}\label{eq:sap}
 where:
 \begin{itemize}
@@ -136,7 +137,7 @@ A figure below shows how the filter is applied on the Signal
 A figure below shows how the filter is applied on the Signal
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.16]{SPANoVelocity}
+\includegraphics[scale=0.14]{SPANoVelocity}
 \caption{Signal after application of the filter}
 \end{figure}
 
@@ -146,7 +147,7 @@ This value it is associated with a certain portion of the road ($ds$). Following
 A figure below show the result.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.16]{SPAFinal}
+\includegraphics[scale=0.14]{SPAFinal}
 \caption{Final Result}
 \end{figure}\label{fig:Simple Accelerations Points Final Result}
 \end{description}
@@ -192,14 +193,14 @@ The steps for its calculation are:
 The result of the application of the filter on the signal shown above is:
  \begin{figure}[H]
 \centering
-\includegraphics[scale=0.16]{CPNoEngine}
+\includegraphics[scale=0.14]{CPNoEngine}
 \caption{Signal Without Engine Vibrations}
 \end{figure}
 \item[4. Zero Velocity Filter:] After applying the first filter, this is also applied, as it is explained in the Chapter\ref{ch:Data Analysis} (section:\ref{sc:Data Filtering}, on page:\pageref{sssc:Zero Velocity Filter}).
 The result of the application of the filter on the signal shown above is:
  \begin{figure}[H]
 \centering
-\includegraphics[scale=0.16]{CPNoVelocity}
+\includegraphics[scale=0.14]{CPNoVelocity}
 \caption{Null Velocity Removed}
 \end{figure}
 \item[5. Determining Critical Points:] In this step, the critical points are identified, according to the formula explained above. The result is shown in the figure.
@@ -216,7 +217,7 @@ When a set of points is identified, they will be grouped within a certain distan
 
 
 
-
+\clearpage
 \subsection{IRI}\label{ssc:IRI}
 As we have seen in Chapter\ref{ch:IRI} (on page, \pageref{ch:IRI}), where this index is widely explained and how it is calculated.
 Briefly, represents the most used road roughness index to evaluate and manage road infrastructure. IRI is defined as the ratio between the sum of vehicle-wheel displacements of a standard vehicle.
@@ -276,10 +277,11 @@ After their applications the result obtained is shown in the figure:
 \includegraphics[scale=0.17]{IRITotalFiltering}
 \caption{Original Signal compared with the filter Signal}
 \end{figure}
+\clearpage
 While for a more detailed view:
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.17]{IRIDetailedFiltering}
+\includegraphics[scale=0.15]{IRIDetailedFiltering}
 \caption{Original Signal (blue) compared with the filter Signal (orange) relative to a little set of data}
 \end{figure}
 As it is possible to see, the signal now is lighter and significantly smoothed, because DC components were been eliminated and background noise has been reduced.
@@ -287,9 +289,10 @@ As it is possible to see, the signal now is lighter and significantly smoothed, 
 The result of integration and filtering is shown on the figure:
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.17]{IRIVelocityIntegration}
+\includegraphics[scale=0.15]{IRIVelocityIntegration}
 \caption{Velocity obtained after integration and filtering}
 \end{figure}
+\clearpage
 \item[8. Velocity Integration:]
 At this point, the integration of the velocity signal respect to the time(\ref{eq:displacement}) can be performed to obtain the displacement. Also, in this case, the trapezoidal integration method(\ref{eq:trapezoidal}) has been used.
 
@@ -297,7 +300,7 @@ The result of integration is shown on the figure:
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.17]{IRIDisplacementIntegration}
+\includegraphics[scale=0.15]{IRIDisplacementIntegration}
 \caption{Displacement obtained after velocity integration}
 \end{figure}
 \item[9. Grouping points in specific distances:] Similarly to the other indexes, even, in this case, the displacement points will have to refer each other to a predetermined distance.
@@ -306,7 +309,7 @@ As indicated \ref{sc:Calculation of IRI}, it is needed a very small segments in 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.17]{IRIFinalResultAfterGPSDivision}
+\includegraphics[scale=0.15]{IRIFinalResultAfterGPSDivision}
 \caption{Final displacement after grouping points}
 \end{figure}
 
@@ -336,7 +339,7 @@ Below is shown an example of the IRI computation of a data series.
 \subsubsection{Correlation phase}
 For these measurement systems, a correlation equation\ref{ssc:correlation} that can be derived from a Class1 or Class2 instruments it is needed, but because we do not own any of them, it has only been simulated.
 
-
+\clearpage
 \section{Data Storing}\label{sc:data_storing}
 After the processing is ended, the results of the respective indexes will be saved on a database by using a Java application where a connection to a MySql database is established using the MySql Connector.
 For each point of the index in question, they will be stored:
@@ -358,7 +361,7 @@ Additionally, to each point, a color will be assigned using the HSV color space.
 To make the read and save faster and more efficacious, a pool of connections was used, in which various threads perform operations on the database. With regard to the insert/update phase, because the data will often refer to the same road sections, it need be checked in this case before insertion, if a point already intersects with a segment referring to points previously saved. If this happens it will be associated with the nearest edge and the value is identified as the average of the two, only updating the point already in the database. Otherwise, if this does not happen a new point is inserted.
 
 
-
+\clearpage
 \section{Viewing on interactive map}\label{sc:Viewing on interactive map}
 Finally, processed data will be displayed on an interactive map using the Open Source Mapbox Map. A website for points representation has been developed, in wich, each of these is represented by specific color circle using Mapbox APIs.
 

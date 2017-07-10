@@ -128,8 +128,9 @@ As shown in the figure below.
 \noindent Smartphone accelerometer detects the following accelerations: $a_{x_{p}}$ , $a_{y_{p}}$ and $a_{z_{p}}$ . To determine the accelerations felt by the vehicle and locate road surface anomalies. The accelerometer must detect what happens in the direction perpendicular ($Z$ axes) to the vehicle\cite{mohan2008nericell}.
 Respectively the $X_{p}$ axis identifies the longitudinal direction, $Y_{p}$ axis the transverse direction and $Z_{p}$ the perpendicular direction respect to the $xy$ plane.
 
+\vspace{0.25cm}
 To detect road anomalies, the direction of the z-axis must correspond to the direction of the z-axes. If this condition subsists, the accelerometer is well oriented, contrarily it is not well oriented and needs to be reoriented. But even if starting from a precise orientation condition, during travel the phone may be moving, or due to unexpected vehicle movements, travel of climbing, downhill, curve, all of these causes could affect the misalignment of the smartphone frame respect to the vehicle frame.
-
+\clearpage
 The reorientation can be performed by the Euler Angles. Three angles that allow to defining the orientation in space of any body through a succession of elementary rotations\cite{diebel2006representing}.
 The $XYZ$ sequence was defined, a rotation around the $x$-axis by an angle $\alpha$ (roll angle), one around the $y$-axis by $\beta$ (pitch angle) and one around the $z$-axis by  $\gamma$ (yaw angle).
 \noindent The equations that allows to reoriented data by the $\alpha$, $\beta$, $\gamma$, angle are:\cite{Andro}
@@ -206,6 +207,7 @@ So the final value $a_{t}$ will be calculated as the Root Mean Square of that va
 
 The figure below shows an example of applying the filter to a series of data subject only to the reorientation operation\ref{sc:Accelerometer Reorientation}.
 
+\vspace{0.5cm}
 \begin{figure}[H]	
 
 \subfloat[Acceleration]{\includegraphics[scale=0.1]{WithRumors}}    
@@ -299,6 +301,7 @@ The original signal (a) is represent in blue, the filtered signal is represent i
  \caption{Application of Moving Average Filter}
   \label{fig:Application of Moving Average	 Filter.}
 \end{figure}
+\clearpage
 \subsubsection{Infinite Impulse Response} \label{ssc:Infite Impulse Response}
 In signals theory, Infinite Impulse Response (IIR) is a dynamic system whose impulsive response is not anything for an infinite amount of time.
 IIR filtering is an alternative approach, that uses a recursive difference equation to represent the filter.
@@ -355,8 +358,11 @@ A high-pass attenuates signals below a cutoff frequency (known as the stopband) 
 \subfloat[Filter Response]{\includegraphics[scale=0.29]{HPFResponse}}    
 
 \subfloat[Unfiltered Signal]{\includegraphics[scale=0.11]{HPFUnfiltered}}
-
-\subfloat[Filtered Signal]{\includegraphics[scale=0.11]{HPFFiltered}}
+\end{figure}
+\begin{figure}[H]
+\centering
+\subfloat[Filtered Signal]
+{\includegraphics[scale=0.11]{HPFFiltered}}
 
 \subfloat[Signal Overlapping]{\includegraphics[scale=0.11]{HPFOverlapped}}
 
@@ -391,18 +397,15 @@ If the time series is made up of oscillating signals of various frequencies plus
 
 To check this, compute the DFT m of Signal and see what it looks like in the frequency domain. The Fast Fourier Transform (FFT) is a mathematical algorithm that computes the DFT very fast.
 The DFT formula:
-\begin{equation}\label{eq:dft}
-X(m\omega_{s})\thinspace = \sum\limits_{k=0}^{N - 1} x_{k} e^{-jm\omega_{s}k}
+\begin{equation}
+X(m\omega_{s})\thinspace = \sum\limits_{k=0}^{N- 1} x_{k} e^{-jm\omega_{s}k}
 \quad where \quad \omega_{s} = \dfrac{2\pi}{N}
-\end{equation}
-
-\noindent Computed this it is possible to see if a spectral peak is present. For this purpose, MATLAB has the $fft$ function, which performs the DFT computation\ref{eq:dft} in an efficient manner, it is called the Fast Fourier Transform (FFT). Hand it a vector $x$ of time domain samples, and it returns a vector $X$ of samples $X(m\omega_{s}),\thinspace m = 0, 1,..., N − 1$ of the DFT computation.
+\end{equation}\label{eq:dft}
+\noindent Computed this it is possible to see if a spectral peak is present. For this purpose, MATLAB has the $fft$ function, which performs the DFT computation\ref{eq:dft} in an efficient manner, it is called the Fast Fourier Transform (FFT). Hand it a vector $x$ of time domain samples, and it returns a vector $X$ of samples $X(m\omega_{s}),\thinspace m = 0, 1,..., N-  1$ of the DFT computation.
 If we take for example this signal:
 \begin{figure}[H]
 \includegraphics[scale=0.16]{LWPUnfitltered}
 \end{figure}
-
-
 \noindent And compute the $fft$:
 \begin{figure}[H]
 \centering
@@ -427,7 +430,6 @@ To understand better this factor, two different GPS coordinates were identified:
 
 show on the figure below:
 \begin{figure}[H]	
-
 \centering
 \includegraphics[scale=0.55]{Problem} \label{GPS Points Problem}
  \caption{Start and End points}
@@ -437,47 +439,50 @@ show on the figure below:
 
 As we can see, we have two different GPS points, but we have a data accumulation at the $Start$ point, in our case equal to $100$ measurements and each of these has $Start$ point as GPS coordinate, the situation is analogue to the $End$ point.
 Start point recordings refer to all $Start-End$ segment, but the intermediate coordinates of the segment are not recorded, and that is what is needed to properly locate the road surface conditions.
-Therefore, a methodology has been developed, which from two different GPS points, allows determining the intermediate points in the segment. As shown in the code below.
-\begin{pseudocode}{Redefine Latitude And Longitude}{Latitude[],Longitude[]}
+Therefore, a methodology has been developed, which from two different GPS points, allows determining the intermediate points in the segment. As shown in the Matlab code below.
+\vspace{0.1cm}
 \label{alg:Redefine Latitude And Longitude}
-\COMMENT{Create two collections of new Latitude and Longitude}\\
-\BEGIN
-NewLatitudeCollection[]\\
-NewLongitudeCollection[]\\
-index = 1\\ 
-i = 1\\
-\FOR y\GETS 2 \TO number \thinspace of \thinspace
-Latitude \thinspace elements \DO \\
-\BEGIN
-FirstGPSCoordinate = Latitude[i], Longitude[i]\\
-SecondGPSCoordinate = Latitude[y], Longitude[y]\\
-\IF \CALL{distance} {FirstGPSCoordinate,SecondGPSCoordinate} \neq 0 \DO\\
-\BEGIN
-\COMMENT{distance function, use haversine formula, that is next explained}\\
-NewLatitudeCollection [index] \GETS Latitude[i]\\
-index++\\
-NewLongitudeCollection[index] \GETS Longitude[i]\\
-index++\\
-latitudeDifference = \dfrac{Latitude[i]\quad minus \quad Latitude[y]}{y-i}\\\\
-longitudeDifference = \dfrac{Longitude[i]\quad minus \quad Longitude[y]}{y-i}\\
-\FOR k\GETS i+1 \TO y-1\DO \\
-\BEGIN
-NewLongitudeCollection[k]=NewLongitudeCollection[k-1] + longitudeDifference\\
-NewLatitudeCollection[k]=NewLatitudeCollection[k-1] + latitudeDifference\\
-\END \\
-index = index + (y-(i+1))
-NewLatitudeCollection [index] \GETS Latitude[y]\\
-index++\\
-NewLongitudeCollection[index] \GETS Longitude[y]\\
-index++\\
-i \GETS y\\ 
-\END
-\END
-\END
-\end{pseudocode} 	
+\lstset{language=Matlab}          % Set your language (you can change the language for each code-block optionally)
+\begin{lstlisting}  % 
+function [NewLatitude, NewLongitude] =
+ redefineLatitudeAndLongitude (ReadedLatitude, ReadedLongitude)
 
+NewLatitude = zeros(1, 1);
+NewLongitude = zeros(1, 1);
+i = 1;
+    
+for y = 2:numel(ReadedLongitude)    
+  latlon1 = [ReadedLatitude(i,1), ReadedLongitude(i,1)];
+  latlon2 = [ReadedLatitude(y,1), ReadedLongitude(y,1)];
+  
+  distance = lldistkm(latlon1,latlon2);   
 
-
+    if(distance ~= 0)    
+       LatitudeDifference = ReadedLatitude(y,1) - ReadedLatitude(i,1);
+       LongitudineDifference = ReadedLongitude(y,1) - ReadedLongitude(i,1);
+       steps = y - i;
+   
+       NewLongitude(i,1) = ReadedLongitude(i,1);
+       LongitudeToAdd = LongitudineDifference / steps;
+       for ix = i+1:y-1
+        NewLongitude(ix,1) = NewLongitude(ix-1,1)+LongitudeToAdd;
+       end       
+       NewLongitude(y,1) = ReadedLongitude(y,1);
+       
+       NewLatitude(i,1) = ReadedLatitude(i,1);
+       LatitudeToAdd = LatitudeDifference / steps;
+       for ix = i+1:y-1
+           NewLatitude(ix,1) = NewLatitude(ix-1,1)+LatitudeToAdd;
+       end
+       NewLatitude(y,1) = ReadedLatitude(y,1);   
+    
+    i = y;
+    end
+end 
+\end{lstlisting}
+\begin{center}
+Code to divide the point inside a segment.
+\end{center}
 The proposed algorithm, when distinguishing two points having a distance between them different from $0$ $\si{\km}$, calculated by the \textit{haversine formula}\ref{ssc:Haversine Formula} that will be explained later, begins the definition of intermediate GPS points in the segment.
 Beginning from the $Start$ point, until to the $End$ point, all intermediate points for both Latitude and Longitude will be calculated, as the previous point plus the difference in Latitude between the Start point and the End point, divided by the number of occurrences between Start and End, analogue procedure for Longitude.
 
@@ -485,10 +490,11 @@ Final result is shown in the figure:
 
 \begin{figure}[H]	
 \centering
-\includegraphics[scale=0.55]{ProblemSolved} \label{Solved GPS Points Problem}
+\includegraphics[scale=0.45]{ProblemSolved} \label{Solved GPS Points Problem}
  \caption{Start and End points}
   \label{fig:Solved GPS Points Problem}
 \end{figure}
+
 \subsection{Haversine Formula} \label{ssc:Haversine Formula}
 This formula is particularly useful because it allows calculating the geographical distance between two points. Particularly in our case, it is mainly used for:
 \begin{itemize}
