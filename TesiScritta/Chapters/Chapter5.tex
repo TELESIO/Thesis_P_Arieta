@@ -8,13 +8,13 @@
 
 \chapter{Road Surface Analysis}
 \label{ch:System Development}
-This chapter describe the techniques that have been used, focusing on the following topics:
+This chapter describes the techniques that have been used, focusing on the following topics:
 
 \begin{itemize}
 \item How data are collected.
-\item Preprocessing and surface condition indices computation.
+\item Preprocessing and surface condition indexes computation.
 \item Storage and Integration of processed data.
-\item Indices visualization on a map.
+\item Indexes visualization on a map.
 \end{itemize}
 
 The figure below shows the structure of the system.
@@ -25,10 +25,10 @@ The figure below shows the structure of the system.
 
 \end{figure}\label{fig:System Structure}
 
-\section{Data Collect}\label{sc:Data Collect}
+\section{Data Collection}\label{sc:Data Collect}
 Initially, the smartphone was fixed up at the windshield of the car by an arm support, forming a $90$-degree angle between the phone and the vehicle axes.
 However, during travel, the support was subject to vibrations that caused additional noise in the data, and could also be subject to movements due to the nature of the support itself and the road surface conditions, thus changing the integrity of the data.
-The smartphone was then mounted horizontally on the car dashboard, forming a proximal $0$-degree angle with it, using a non-slip material. This setting was optimal because thethe perceived vibrations by the sensore are proportional to the vibrations experienced by the car's chassis, meaning that the movements of the smartphone itself were sufficiently small.
+The smartphone was then mounted horizontally on the car dashboard, forming a proximal $0$-degree angle with it, using a non-slip material. This setting was optimal because the perceived vibrations by the sensor are proportional to the vibrations experienced by the car's chassis, meaning that the movements of the smartphone itself were sufficiently small.
 The \texttt{AndroSensors} application available on the PlayStore was adopted as software for interacting with the sensors. That allows us  performing multiple concurrent measurements of various sensors.
 
 \begin{figure}[H]
@@ -85,7 +85,7 @@ Once the GPS signal has been established, it is possible to start recording the 
 Once the measurements are complete, the data will be saved in a $.xls$ file.
 These will be processed with MATLAB (Matrix Laboratory) a multi-paradigm numerical computing environment, which makes numerical computing more easier and computationally faster than other programming paradigms.
 Initially, the $.xls$ file is read, and each column of it depending on the data nature (numeric or string) will be stored in a vector, which can be found in the MATLAB workspace.
-Once the raw data has been read, the indices computation starts.
+Once the raw data has been read, the indexes computation starts.
 
 \clearpage
 \subsection{Simple Acceleration Points}\label{ssc:Simple Accelerations Points}
@@ -109,7 +109,7 @@ This value would indicate that the condition of the road surface it is almost pe
 On the other hand, when taking into consideration an highway, the travel speed is  high so for each analysed segment, the number of samples available is lower, since the segment is traversed in a shorter amount of time.
 High energy peaks are not outnumbered by the low energy peaks so the resulting in a higher computed value, which should suggests that road surface conditions is not optimal.
 
-For each considered segment the proposed indices is computed performing the following steps:
+For each considered segment the proposed indexes is computed performing the following steps:
 
 For example considering the following signal:
 \begin{figure}[H]
